@@ -1,5 +1,6 @@
 body{
     margin: auto;
+    /* background-color: #F7F7FF; */
 }
 
 p,li,a{
@@ -15,11 +16,16 @@ header{
     display: flex;
     align-content: center;
     justify-content:center;
-    background-color:#279AF1;
+    background-color:#4CB9CA;
     padding: 10px;
+    padding-bottom: 20px;
     gap:2.5rem;
 }
-
+main{
+    /* background-color:#84ebc3; */
+    background-color: #ABD8B4;
+    margin: 10px;
+}
 .hLogo{
     display: flex;
     align-items: center;
@@ -49,10 +55,10 @@ header{
 .facebook, .instagram{width: 30px;}
 
 nav ul {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    background-color: #383C42;
+    background-color: #FFFEF7;
 }
 
 nav ul li a {
@@ -60,21 +66,24 @@ nav ul li a {
     display: block;
     text-decoration: none;
     padding:.8rem 2vw;
+    color:#383C42;
+    border: 1px solid #383C42;
 }
-nav ul li a:hover { background-color:wheat;}
+
+nav ul li.active a { background-color: #383C42; color:#FFFEF7; font-weight:bolder;}
+nav ul li.active a:hover { background-color:#ABD8B4; font-weight:600; color:#383C42;}
+nav ul li:hover { background-color:#ABD8B4; font-weight:600}
+
 
 nav ul{display: none;}
-
 nav ul.open {display: block;}
-
 .burguer span:nth-child(1) {display: block;}
 .burguer span:nth-child(2) {display: none;}
 .burguer.open span:nth-child(1) {display: none;}
 .burguer.open span:nth-child(2) {display: block;}
 
-
 footer{
-    background-color:#279AF1;
+    background-color:#4CB9CA;
     padding: 10px;
 }
 
@@ -107,6 +116,7 @@ footer{
 .footer-grid p:nth-child(4){
     margin-top: 0;
     grid-column: 2/3;
+    text-align: center;
 }
 
 .footer-grid form{
@@ -114,9 +124,9 @@ footer{
 }
 
 footer .very-bottom{
-    border-top: 1px solid black;
+    border-top: 1px solid #383C42;
     margin: auto;
     text-align: center;
-    word-break: normal;
-    overflow-wrap:break-word ;
+    /* word-break: normal; */
+    /* overflow-wrap:break-word ; */
 }

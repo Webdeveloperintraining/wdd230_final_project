@@ -1,5 +1,5 @@
 function toggleMenu() {
-    document.querySelector(".menu").classList.toggle("open");
+    document.querySelector(".main-nav").classList.toggle("open");
     document.querySelector('.burguer').classList.toggle("open");
     
 }
@@ -7,12 +7,12 @@ function toggleMenu() {
 const clickX= document.querySelector(".burguer");
 clickX.onclick=toggleMenu;
 
-
-// function toggleMenu() {
-//     document.querySelector(".menu").classList.toggle("open");
-//     document.querySelector('.burguer').classList.toggle("open");
+function togglenav2() {
+    document.querySelector(".secondary-nav").classList.toggle("open");
+    //document.querySelector('.burguer').classList.toggle("open");
     
-// }
+}
 
-// const clickS= document.querySelector(".burguer");
-// clickS.onclick=toggleMenu;
+//const clickS= document.querySelector(".burguer");
+clickS.onclick=toggleMenu;
+
