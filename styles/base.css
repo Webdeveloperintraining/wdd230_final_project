@@ -54,11 +54,18 @@ main{
 
 .facebook, .instagram{width: 30px;}
 
+nav ul{display: none;}
+nav ul.open {display: block;}
+.burguer span:nth-child(1) {display: block;}
+.burguer span:nth-child(2) {display: none;}
+.burguer.open span:nth-child(1) {display: none;}
+.burguer.open span:nth-child(2) {display: block;}
+
 nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    background-color: #FFFEF7;
+    background-color: white;
 }
 
 nav ul li a {
@@ -66,21 +73,26 @@ nav ul li a {
     display: block;
     text-decoration: none;
     padding:.8rem 2vw;
-    color:#383C42;
+    color:#2C3546;
     border: 1px solid #383C42;
 }
 
-nav ul li.active a { background-color: #383C42; color:#FFFEF7; font-weight:bolder;}
+nav ul li.active a{ background-color: #383C42; color:#FFFEF7; font-weight:bolder;}
 nav ul li.active a:hover { background-color:#ABD8B4; font-weight:600; color:#383C42;}
 nav ul li:hover { background-color:#ABD8B4; font-weight:600}
 
-
-nav ul{display: none;}
-nav ul.open {display: block;}
-.burguer span:nth-child(1) {display: block;}
-.burguer span:nth-child(2) {display: none;}
-.burguer.open span:nth-child(1) {display: none;}
-.burguer.open span:nth-child(2) {display: block;}
+.subnav-content {
+    display: none;
+    background-color: #FFFEF7;
+    font-weight:normal;
+  } 
+  
+.subnav:hover{
+    background-color:#4CB9CA;
+}
+ .subnav:hover .subnav-content {
+    display: block;
+} 
 
 footer{
     background-color:#4CB9CA;
