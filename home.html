@@ -22,13 +22,14 @@
             <p>Temple Inn & Suites</p>
         </div>
         <div class="secondH">
-            <img class="facebook" src="./images/facebook_logo.png" alt="Facebook Logo"><img class="instagram" src="./images/instagram.png" alt="Instagram Logo">
+            <a target="_blank" href="https://www.facebook.com/"><img class="facebook" src="./images/facebook_logo.png" alt="Facebook Logo"></a>
+            <a target="_blank" href="https://instagram.com/"><img class="instagram" src="./images/instagram.png" alt="Instagram Logo"></a>
             <button class="burguer"><span>&#9776;</span><span>X</span></button>
         </div>
     </header>
     <nav>
         <ul class="main-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="home.html">Home</a></li>
             <li><a href="./reservation.html">Reservations</a></li>
             <li><a href="./temples.html">Temples</a></li>
             <li class="subnav"><a href="#">Services &#9660;</a>
@@ -41,36 +42,50 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h1>DANGER EXTREMILY DANGEROUS SNOW STORM </h1>
-        </section>
-        <section>
-            <article>
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-            </article>
-        </section>
+        <div class="home-main">
+            <section>
+                <h1>DANGER EXTREMILY DANGEROUS SNOW STORM </h1>
+            </section>
+            <section>
+                <article>
+                    <img src="#" alt="#">
+                    <img src="#" alt="#">
+                    <img src="#" alt="#">
+                    <img src="#" alt="#">
+                    <img src="#" alt="#">
+                </article>
+            </section>
 
-        <section>
-            <p><a href="./reservation.html">Reserve Now</a></p>
-        </section>
+            <section>
+                <p><a href="./reservation.html">Reserve Now</a></p>
+            </section>
 
-        <section>
-            <h3>New York Temple</h3>
-            <ul>
-                <li>Address:</li>
-                <li>Schedule:</li>
-                <li>Made</li>
-                <li>Visitants Average per week</li>
-            </ul>
-        </section>
+            <section>
+                <h3>Philadelphia Pennsylvania Temple</h3>
+                <img src="./images/philadelphia_pennsylvania_temple_exterior.jpeg" alt="Philadelphia Pennsylvania Temple" width="350px">
+                <ul>
+                    <li><a target="_blank" href="https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=philadelphia-pennsylvania-temple">1739 Vine St
+                        Philadelphia PA 19103
+                        United States</a></li>
+                    <li>Telephone: (1) 215-398-3040</li>
+                    <li>Dedicated: 18 September 2016</li>
+                    <li><a href="https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng" target="_blank">Make a reservation Now!</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Weather in wherever you are</h2>
-        </section>
+            <section>
+                <h2>Weather in wherever you are</h2>
+                <div class="weather-flex">
+                    <img id="weather-img" src="#" alt="#">
+                    <span id="temperature"></span>
+                    <span id="w_description"></span>
+                </div>
+                <div id="weatherBtn">
+                    <button id="celBtn"><span>&deg;C</span></button>
+                    <button id="farBtn"><span>&deg;F</span></button>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-grid">
@@ -95,5 +110,6 @@
         </div>
     </footer>
     <script src="./scripts/button_menu.js"></script>
+    <script src="./js/temperature.js"></script>
 </body>
 </html>
