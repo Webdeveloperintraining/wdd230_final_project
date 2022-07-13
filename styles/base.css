@@ -109,12 +109,16 @@ nav ul li:hover { background-color:#ABD8B4; font-weight:600}
 }
 .home-main section{
     border: 1px solid #383C42;
-    background-color: #ced8ab;
-    /* background-color: #b8a435; */
+    /* background-color: #ced8ab; */
+    background-color: #f7eeba;
     /* background-color: #abd8d0; */
     /* background-color: #abd8d4; */
     /* background-color: #c9a16d; */
 }
+
+
+
+
 
 /* Footer styles*/
 footer{

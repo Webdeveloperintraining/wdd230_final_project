@@ -1,47 +1,85 @@
 // Document location where I want my results displayed
 let temp=document.querySelector("#temperature");
-let wind=document.querySelector("#wind");
-let windChill=document.querySelector("#wind-chill");
+let humidity=document.querySelector("#humidity");
 const weatherImg=document.querySelector("#weather-img");
 const description=document.querySelector("#w_description");
 
 //Using Weather API to display weather
-const url= "https://api.openweathermap.org/data/2.5/weather?q=Tijuana&appid=625b3e54582f7765110b7e680ff34db6&units=imperial";
+const url= "https://api.openweathermap.org/data/2.5/weather?q=Bethesda&exclude=current,hourly,minutely,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
+const url2= "https://api.openweathermap.org/data/2.5/forecast?q=Bethesda&exclude=current,hourly,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
 
-async function getJson(){
-    let response = await fetch(url);
+async function getJson(link){
+    let response = await fetch(link);
     if (response.ok) {
         const data = await response.json();
-        displayTemp(data)
+        displayTempSingle(data)
+        //forecast(data)
 }
 };
-getJson()
+getJson(url)
 
-function displayTemp(Tijuana){
-    var temperature=parseInt(Tijuana.main.temp);
-    var wSpeed=parseFloat(Tijuana.wind.speed);
+function displayTempSingle(city){
+    var temperature=parseInt(city.main.temp);
+    weatherImg.setAttribute("src",`https://openweathermap.org/img/wn/${city.weather[0].icon}.png`);
+    weatherImg.setAttribute("alt",`${city.weather[0].description}`);
     temp.innerHTML= `<p>${temperature.toFixed(0)} &deg;F</p>`;
-    wind.innerHTML=`${wSpeed} mPH`;
-    weatherImg.setAttribute("src",`https://openweathermap.org/img/wn/${Tijuana.weather[0].icon}.png`);
-    weatherImg.setAttribute("alt",`${Tijuana.weather[0].description}`);
-    description.innerHTML=`<h3>${Tijuana.weather[0].description}</h3>`;
-    Chill(temperature, wSpeed)
+    humidity.innerHTML=`<p>Humidity: ${city.main.humidity}% </p>`;
+    description.innerHTML=`<h3>${city.weather[0].description}</h3>`;
 };
+//getJson(url2)
 
-//Buttons that Changes Celsius or Farenheit
-function turnCelsius(){
-    const celsius= (temperature)=>(temperature-32)*5/9;
-    temp.innerHTML=`<p>${celsius(temperature).toFixed(0)} &deg;C</p>`;
-    const kmH=wSpeed*1.60934;
-    wind.innerHTML=`${kmH.toFixed(2)} kMH`;
 
-};
 
-function turnFarenheit (){
-    temp.innerHTML=`<p>${temperature.toFixed(0)} &deg;F</p>`;
-    wind.innerHTML=`${wSpeed.toFixed(2)} mPH`;
+// function forecast (day){
+//     const day1=day[0];
+//     const day2=day[1];
+//     const day3=day[2];
+//     displayTempSingle(day1)
+//     displayTempSingle(day2)
+//     displayTempSingle(day3)
 
-};
+// }
 
-document.querySelector("#celBtn").addEventListener("click", turnCelsius)
-document.querySelector("#farBtn").addEventListener("click", turnFarenheit)
+
+
+// fetchForecast = function () {
+// 	var endpoint =
+//         "https://api.openweathermap.org/data/2.5/forecast?q=Bethesda&exclude=current,hourly,minutely,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
+// 	var forecastEl = document.getElementsByClassName("forecast");
+
+// 	fetch(endpoint)
+// 	.then(function (response) {
+// 		if (200 !== response.status) {
+// 			console.log(
+// 				"Looks like there was a problem. Status Code: " + response.status
+// 			);
+// 			return;
+// 		}
+
+// 		forecastEl[0].classList.add('loaded');
+
+// 		response.json().then(function (data) {
+// 			var fday = "";
+// 			data.daily.forEach((value, index) => {
+// 				if (index > 0) {
+// 					var dayname = new Date(value.dt * 1000).toLocaleDateString("en", {
+// 						weekday: "long",
+// 					});
+// 					var icon = value.weather[0].icon;
+// 					var temp = value.temp.day.toFixed(0);
+// 					fday = `<div class="forecast-day">
+// 						<p>${dayname}</p>
+// 						<p><span class="ico-${icon}" title="${icon}"></span></p>
+// 						<div class="forecast-day--temp">${temp}<sup>°C</sup></div>
+// 					</div>`;
+// 					forecastEl[0].insertAdjacentHTML('beforeend', fday);
+//                     let day=1++
+                    
+// 				}
+// 			});
+// 		});
+// 	})
+// 	.catch(function (err) {
+// 		console.log("Fetch Error :-S", err);
+// 	});
+// };
