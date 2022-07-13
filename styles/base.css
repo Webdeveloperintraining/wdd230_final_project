@@ -114,32 +114,32 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     background-color: #f7eeba;
 }
 
-#interactive-banner{
+#slideshow {
     border:none;
     display: flex;
     justify-content:center;
     align-content: center;    
 }
 
-#interactive-banner .banner-img{
+#slideshow .slideshow-img{
     height: 100%;
     width: 100%;
     object-fit:cover;
 }
 
-#interactive-banner .banner-img:nth-child(0){
+#slideshow  .slideshow-img:nth-child(0){
 display: none;
 }
 
-#interactive-banner .banner-img:nth-child(2){
+#slideshow .slideshow-img:nth-child(2){
     display: none;
     }
 
-#interactive-banner .banner-img:nth-child(3){
+    #slideshow  .slideshow-img:nth-child(3){
     display: none;
     }
 
-#interactive-banner .banner-img:nth-child(1){
+#slideshow .slideshow-img:nth-child(1){
     display: none;
 
     }
@@ -147,7 +147,7 @@ display: none;
 #left{
     position: absolute;
     cursor: pointer;
-    left: -20px;
+    left: 5%;
     top: -.6em;
     font-weight:900;
     font-size: 7rem;
@@ -158,7 +158,7 @@ display: none;
     position: absolute;
     cursor: pointer;
     top: -.6em;
-    right: -20px;
+    right: 5%;
     color: #4CB9CA;
     font-weight: 900;
     font-size: 7rem;

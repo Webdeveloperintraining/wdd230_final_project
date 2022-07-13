@@ -1,0 +1,49 @@
+{
+    "temples":[
+        {
+        "templeName":1,
+        "address":5,
+        "telephone":"+1 46 4444 444",
+        "email":"a@gmail.com",
+        "services":"hotel",
+        "Dedicated":2000,
+        "ordinanceSchedule":"8:00am-10:00pm",
+        "sessionSchedule":"10:00am-10:00pm",
+        "closureSchedule":"December"
+        },
+        {
+        "templeName":2,
+        "address":5,
+        "telephone":"+1 46 4444 444",
+        "email":"a@gmail.com",
+        "services":"hotel",
+        "Dedicated":2000,
+        "ordinanceSchedule":"8:00am-10:00pm",
+        "sessionSchedule":"10:00am-10:00pm",
+        "closureSchedule":"December"
+        },
+        {
+        "templeName":3,
+        "address":5,
+        "telephone":"+1 46 4444 444",
+        "email":"a@gmail.com",
+        "services":"hotel",
+        "Dedicated":2000,
+        "ordinanceSchedule":"8:00am-10:00pm",
+        "sessionSchedule":"10:00am-10:00pm",
+        "closureSchedule":"December"
+        },
+        {
+        "templeName":4,
+        "address":5,
+        "telephone":"+1 46 4444 444",
+        "email":"a@gmail.com",
+        "services":"hotel",
+        "Dedicated":2000,
+        "ordinanceSchedule":"8:00am-10:00pm",
+        "sessionSchedule":"10:00am-10:00pm",
+        "closureSchedule":"December"
+        }
+    ]   
+
+}
