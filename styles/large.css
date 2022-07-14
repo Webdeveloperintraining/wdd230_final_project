@@ -1,0 +1,31 @@
+@media only screen and (min-width: 70rem ){
+    .home-main{
+        grid-template-areas:"a a a a a"
+                            "s s s s s"
+                            "s s s s s"
+                            "w w r r r"
+                            "w w t t t"
+                            "w w t t t"
+
+    }
+
+    #alerts{
+        grid-area:a;
+    }
+
+    #slideshow{
+        grid-area:s;
+    } 
+
+    .home-main #reserve-now {
+        grid-area:r;
+    }
+
+    .home-main #temple-summary {
+        grid-area:t;
+    }
+
+    #weather{
+        grid-area:w;
+    }
+}

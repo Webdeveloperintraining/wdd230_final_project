@@ -43,7 +43,34 @@
         </ul>
     </nav>
     <main>
-        
+        <section id="">
+            <form action="thankyou.html">
+                <h2>Ask your questions here!</h2>
+
+                <fieldset>
+                    <label class="top">Location<input type="text" name="location" required></label>
+                    <label class="top">Date<input type="date" name="date" required ></label>
+                    <label class="top">Type of Room*<input type="text" name="name" required ></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
+                    <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
+                    <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
+                    <label class="top">Home state/Country*<input type="text" name="name" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
+                </fieldset>
+                <div class="centerBTN">
+                    <input type="hidden" class="full-datev" name="full-date" value=""> 
+                    <input type="submit" value="Send Message" id="submit-contact">
+                </div>
+            </form>
+        </section>
+
     </main>
     <footer>
         <div class="footer-grid">
@@ -57,10 +84,13 @@
             </div>
             <p><a target="_blank" href="https://www.google.com/maps/place/4800+Montgomery+Ln+%23300,+Bethesda,+MD+20814,+USA/@38.9832518,-77.0955318,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c97b6b8f21f1:0x9a0b3cde14da0a60!8m2!3d38.9832518!4d-77.0955318">Address: 4800 Montgomery Ln #300, Bethesda, MD 20814</a></p>
             <p>Phone:<br>+1 301 1234 456</p>
-            <form action="">
-            <input type="email" name="email-footer" id="email-footer">
-            <textarea name="Message" class="footer-message" cols="30" rows="10"></textarea>
-            </form>
+            <div class="contact-form">
+                <h3>Contact us</h3>
+                <form action="">
+                    <label><input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
+                    <label><textarea name="Message" class="footer-message" cols="30" rows="10"></textarea></label>
+                </form>
+            </div>
         </div>
         <div class="very-bottom">
             <p>©2022 The Temple Inn & Suites | Weather provided by: <a target="_blank" href="#">OpenWeather</a> |</p>

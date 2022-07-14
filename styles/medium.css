@@ -1,0 +1,81 @@
+@media only screen and (min-width: 37.5em){
+
+    .home-main{
+        display: grid;
+        grid-template-areas:"a a a a"
+                            "s s s s"
+                            "s s s s"
+                            "r r t t"
+                            "r r t t"
+                            "w w w w"
+                            "w w w w"
+    }
+
+    #alerts{
+        grid-area:a;
+    }
+
+    #slideshow{
+        grid-area:s;
+    } 
+
+    .home-main #reserve-now {
+        grid-area:r;
+    }
+
+    .home-main #temple-summary {
+        grid-area:t;
+    }
+
+    #weather{
+        grid-area:w;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer-grid{
+        grid-template-columns:50% 50%;
+        /* grid-template-rows: 50px 50px 50px 50px; */
+    }
+
+    .footer-grid .social-footer{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        margin-bottom:16px;
+    }
+
+    .footer-grid p:nth-child(3){
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin: auto;
+    }
+    .footer-grid p:nth-child(4){
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin-bottom: 0;
+    }
+
+    .footer-grid .contact-form{
+        grid-row: 1/5;
+        grid-column: 2/3;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-bottom:16px;
+    }
+
+    
+}
+

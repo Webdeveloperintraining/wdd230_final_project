@@ -42,7 +42,28 @@
             </li>
         </ul>
     </nav>
-    <main></main>
+    <main>
+        <section id="form2">
+            <form action="thankyou2.html">
+                <h2>Ask your questions here!</h2>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">Name*<input type="text" name="name" required placeholder="Clark / Samuel Rogers"></label>
+                    <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
+                    <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Message</legend>
+                    <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
+                </fieldset>
+                <div class="centerBTN">
+                    <input type="hidden" class="full-datev" name="full-date" value=""> 
+                    <input type="submit" value="Send Message" id="submit-contact">
+                </div>
+            </form>
+        </section>
+        
+    </main>
     <footer>
         <div class="footer-grid">
             <div class="hLogo">
