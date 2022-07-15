@@ -8,16 +8,20 @@ let gotPosition= function(pos){
 
 let getForecast= function(lat,long){
     let url= `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=current,minutely,hourly&units=imperial&appid=625b3e54582f7765110b7e680ff34db6`;
-    getWeatherText(url)
+    let url2= `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=625b3e54582f7765110b7e680ff34db6`;
+    getWeatherText(url,url2);
 }
 
-async function getWeatherText(url){
+async function getWeatherText(url,url2){
     let weatherObject= await fetch(url);
     let weatherText = await weatherObject.text();
-    parseWeather(weatherText);
+    let weatherPlace= await fetch(url2);
+    const name = await weatherPlace.json();
+    parseWeather(weatherText,name);
+    displayForecast(name[0].name)
 }
 
-let parseWeather = function (weatherText){
+let parseWeather = function (weatherText,name){
     let weatherJSON = JSON.parse(weatherText);
     let dailyForecast = weatherJSON.daily;
     for(x=0; x < 3; x++){
@@ -33,7 +37,8 @@ let parseWeather = function (weatherText){
     let lowTemp=day.temp.min;
     let humidity= day.humidity;
     let windSpeed= day.wind_speed;
-    displayWeatherDay(dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed)
+    let cityName=name[0].name;
+    displayWeatherDay(cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed)
     }
 }
 
@@ -50,9 +55,10 @@ let getDayOfWeek = function (dayNum){
     return (weekday[dayNum])
 }
 
-let displayWeatherDay=function(dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed){
+let displayWeatherDay=function(cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed){
+    document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather in "+cityName;
     let out=`<div class='weatherDay'><h3>${dayOfWeek}</h3>`
-    out += `<img src="http://openweathermap.org/img/wn/${icon}.png" alt=${description}></img>`;
+    out += `<img src="https://openweathermap.org/img/wn/${icon}.png" alt=${description}>`;
     out +=`<p id="description">${description}</p>`;
     out +=`<p>High Temperature: ${highTemp} &deg;F</p>`;
     out +=`<p>Low Temperature: ${lowTemp} &deg;F</p>`;
@@ -63,18 +69,20 @@ let displayWeatherDay=function(dayOfWeek,icon,description,highTemp,lowTemp,humid
 
 navigator.geolocation.getCurrentPosition(gotPosition);
     
-function displayForecast(){
+function displayForecast(name){
     let button=document.getElementById("forecastBtn");
     let weather1=document.querySelector("#forecast  .weatherDay:nth-child(2)");//.style.display="block";
     let weather2=document.querySelector("#forecast  .weatherDay:nth-child(3)");//.style.display="block";
-    if (weather1.style.display === "none" ||weather1.style.display === "") {
+    if (weather1.style.display === "none") /*||weather1.style.display === "") */{
         weather1.style.display = "block";
         weather2.style.display = "block";
         button.innerHTML="Today's Weather"
+        //document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather Forecast in "+cityName;
       } else {
         button.innerText="Forecast"
         weather1.style.display = "none";
         weather2.style.display = "none";
+        //document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather in "+cityName;
       }
 }
 
