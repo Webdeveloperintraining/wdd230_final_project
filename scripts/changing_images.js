@@ -1,3 +1,4 @@
+/* Code made with the contribution of the following page:  */
 
 const leftArrow=document.querySelector("#left")
 const rightArrow=document.querySelector("#right")
@@ -19,7 +20,3 @@ function changingImages(){
     }
     window.onload=changingImages;
 
-
-
-// leftArrow.addEventListener("click",changingImages)
-// rightArrow.addEventListener("click",changingImages)

@@ -1,85 +1,62 @@
-// Document location where I want my results displayed
-let temp=document.querySelector("#temperature");
-let humidity=document.querySelector("#humidity");
-const weatherImg=document.querySelector("#weather-img");
-const description=document.querySelector("#w_description");
+/* Code found in https://www.youtube.com/watch?v=buS3mweBWCA */
 
-//Using Weather API to display weather
-const url= "https://api.openweathermap.org/data/2.5/weather?q=Bethesda&exclude=current,hourly,minutely,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
-const url2= "https://api.openweathermap.org/data/2.5/forecast?q=Bethesda&exclude=current,hourly,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
-
-async function getJson(link){
-    let response = await fetch(link);
-    if (response.ok) {
-        const data = await response.json();
-        displayTempSingle(data)
-        //forecast(data)
+let gotPosition= function(pos){
+    let lat= pos.coords.latitude;
+    let long=pos.coords.longitude;
+    getForecast(lat,long);
 }
-};
-getJson(url)
 
-function displayTempSingle(city){
-    var temperature=parseInt(city.main.temp);
-    weatherImg.setAttribute("src",`https://openweathermap.org/img/wn/${city.weather[0].icon}.png`);
-    weatherImg.setAttribute("alt",`${city.weather[0].description}`);
-    temp.innerHTML= `<p>${temperature.toFixed(0)} &deg;F</p>`;
-    humidity.innerHTML=`<p>Humidity: ${city.main.humidity}% </p>`;
-    description.innerHTML=`<h3>${city.weather[0].description}</h3>`;
-};
-//getJson(url2)
+let getForecast= function(lat,long){
+    let url= `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&long=${long}&exclude=current,minutely,hourly,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6`;
+    getWeatherText(url)
+}
 
+async function getWeatherText(url){
+    let weatherObject= await fetch(url);
+    let weatherText = await weatherObject.text();
+    parseWeather(weatherText);
+}
 
+let parseWeather = function (weatherText){
+    let weatherJSON = JSON.parse(weatherText);
+    let dailyForecast = weatherJSON.daily;
+    for(x=0; x < dailyForecast.length; x++){
+        let day= dailyForecast[x];
+        let today = new Date().getDay() + x;
+        if (today > 3) {
+            today = today-7;
+        }
+    let dayOfWeek = getDayOfWeek(today);
+    let icon= day.weather[0].icon;
+    let description= day.weather[0].description;
+    let highTemp=day.temp.max;
+    let lowTemp=day.temp.min;
+    let humidity= weather[0];
+    displayWeatherDay(dayOfWeek,icon,description,highTemp,lowTemp,humidity)
+    }
+}
 
-// function forecast (day){
-//     const day1=day[0];
-//     const day2=day[1];
-//     const day3=day[2];
-//     displayTempSingle(day1)
-//     displayTempSingle(day2)
-//     displayTempSingle(day3)
+let getDayOfWeek = function (dayNum){
+    var weekday=new Array(7);
+    weekday[0]="Sunday"
+    weekday[1]="Monday"
+    weekday[2]="Tuesday"
+    weekday[3]="Wednesday"
+    weekday[4]="Thursday"
+    weekday[5]="Friday"
+    weekday[6]="Saturday"
 
-// }
+    return (weekday[dayNum])
+}
 
+let displayWeatherDay=function(dayOfWeek,icon,description,highTemp,lowTemp,humidity){
+    let out=`<div class='weatherDay'><img src="http://openweathermap.org/img/wn/${icon}.png" alt=${description}>`
+    out += `<h3>${dayOfWeek}</h3>`;
+    out +=`<p>High Temperature: ${description}</p>`;
+    out +=`<p>High Temperature: ${highTemp}</p>`;
+    out +=`<p>Low Temperature: ${lowTemp}</p>`;
+    out +=`<p>Humidity: ${humidity}</p></div>`;
+    document.getElementById("forecast").innerHTML += out;
+}
 
-
-// fetchForecast = function () {
-// 	var endpoint =
-//         "https://api.openweathermap.org/data/2.5/forecast?q=Bethesda&exclude=current,hourly,minutely,alerts&units=imperial&appid=625b3e54582f7765110b7e680ff34db6";
-// 	var forecastEl = document.getElementsByClassName("forecast");
-
-// 	fetch(endpoint)
-// 	.then(function (response) {
-// 		if (200 !== response.status) {
-// 			console.log(
-// 				"Looks like there was a problem. Status Code: " + response.status
-// 			);
-// 			return;
-// 		}
-
-// 		forecastEl[0].classList.add('loaded');
-
-// 		response.json().then(function (data) {
-// 			var fday = "";
-// 			data.daily.forEach((value, index) => {
-// 				if (index > 0) {
-// 					var dayname = new Date(value.dt * 1000).toLocaleDateString("en", {
-// 						weekday: "long",
-// 					});
-// 					var icon = value.weather[0].icon;
-// 					var temp = value.temp.day.toFixed(0);
-// 					fday = `<div class="forecast-day">
-// 						<p>${dayname}</p>
-// 						<p><span class="ico-${icon}" title="${icon}"></span></p>
-// 						<div class="forecast-day--temp">${temp}<sup>°C</sup></div>
-// 					</div>`;
-// 					forecastEl[0].insertAdjacentHTML('beforeend', fday);
-//                     let day=1++
-                    
-// 				}
-// 			});
-// 		});
-// 	})
-// 	.catch(function (err) {
-// 		console.log("Fetch Error :-S", err);
-// 	});
-// };
+navigator.geolocation.getCurrentPosition(gotPosition);
