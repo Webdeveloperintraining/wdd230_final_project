@@ -53,7 +53,7 @@ main{
 }
 
 .secondH button{
-    height: 2.2em;
+    height: 2em;
 }
 
 .facebook, .instagram{width: 30px;}
@@ -91,8 +91,9 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     font-weight:normal;
   } 
   
-.subnav:hover{
-    background-color:#4CB9CA;
+.subnav #sub:hover{
+    background-color:#383C42;
+    color: #FFFEF7;
 }
 
  .subnav:hover .subnav-content {
@@ -123,8 +124,6 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     border: 1px solid #383C42;   
 }
 
-
-
 #slideshow img{
     height: 100%;
     width: 100%;
@@ -133,6 +132,30 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
 
 #temple-summary img{
     width:70%;
+}
+
+#description{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+#forecast .weatherDay{
+    border: 1px solid #383C42;
+    margin: 20px;
+}
+
+.weatherDay:nth-child(2){
+    display:none;
+}
+
+.weatherDay:nth-child(3){
+    display:none;
+}
+
+#forecastBtn{
+    color: #383C42;
+    margin:20px;
+    margin-top: 0;
 }
 
 /* #left{
@@ -186,7 +209,6 @@ footer{
     margin: auto;
     grid-row: 1/2;
     grid-column: 2/3;
-
 }
 
 .footer-grid p:nth-child(3){

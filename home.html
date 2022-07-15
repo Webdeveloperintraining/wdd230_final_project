@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/large.css">
-    <script src="./scripts/changing_images.js" defer></script>
+    <script src="./scripts/temperature.js" defer></script>
     <title>Home - Temple Inn & Suites</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
             <li class="active"><a href="home.html">Home</a></li>
             <li><a href="./reservation.html">Reservations</a></li>
             <li><a href="./temples.html">Temples</a></li>
-            <li class="subnav"><a href="#">Services &#9660;</a>
+            <li class="subnav"><a id="sub" href="#">Services &#9660;</a>
                 <ul class="subnav-content">
                 <li><a href="./services.html">Services Information</a></li>
                 <li><a href="./reception.html">Reception</a></li>
@@ -45,10 +45,11 @@
     </nav>
     <main>
         <div class="home-main">
-        <section id="alerts">
-                <span></span>
-            </section>
-
+            <!-- To display weather alerts, you have to pay a Developer subscription in openweather-->
+            <!-- <div class="home-main">
+            <section id="alerts">
+                    <span></span>
+                </section> -->
             <section id="slideshow">
                 <img name="slide" src="./images/bapstism-related-content-small.jpg" alt="People inside a room close to the temple">
                 <!-- <p id="left">&lt;</p> 
@@ -79,6 +80,7 @@
             <section id="weather">
                 <h2>Weather Forecast</h2>
                 <div id="forecast"></div>
+                <button id="forecastBtn" onclick="displayForecast()">Forecast</button>
             </section>
         </div>
     </main>
@@ -111,6 +113,6 @@
         </div>
     </footer>
     <script src="./scripts/button_menu.js"></script>
-    <script src="./scripts/temperature.js"></script>
+    <script src="./scripts/changing_images.js"></script>
 </body>
 </html>
