@@ -52,4 +52,11 @@
     #temple-summary img{
         width: 50%;
     }
+
+    /*Temples section */
+    #temple-section {
+        margin: auto;
+        max-width: 70rem;
+    }
+    
 }

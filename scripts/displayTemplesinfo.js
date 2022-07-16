@@ -28,7 +28,8 @@ function templeInfo(temple){
     email.innerHTML=`<b>Email:</b> ${temple.email}`;
     ordinanceSchedule.innerHTML=`<b>Ordinance schedule:</b> ${temple.ordinanceSchedule}`;
     sessionSchedule.innerHTML=`<b>Session Schedule:</b> ${temple.sessionSchedule}`;
-    closureSchedule.innerHTML=`<b>Closure Schedule</b> <ul><li>${temple.closureSchedule}</li></ul>`;
+    closureSchedule.innerHTML=`<b>Closure Schedule: </b> <ul><li>${temple.closureSchedule}</li></ul>`;
+    console.log(temple.closureSchedule)
     picture.setAttribute("src",temple.image);
     picture.setAttribute("alt",`${temple.templeName} temple`);
 

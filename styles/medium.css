@@ -73,6 +73,9 @@
         margin-bottom:16px;
     }
 
+    #temple-section .temples{
+        grid-template-columns: 1fr 1fr;
+    }
     
 }
 

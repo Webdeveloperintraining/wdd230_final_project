@@ -159,6 +159,8 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     top:-.2rem;
     font-size:2rem;
     text-align: left;
+    word-break:normal;
+    overflow-wrap: break-word;
 }
 
 /* #slideshow #message{
