@@ -1,9 +1,12 @@
 /* Code found in https://www.youtube.com/watch?v=buS3mweBWCA */
+var cityName
+var latitude=38.984653;
+var longitude=-77.094711;
 
 let gotPosition= function(pos){
     let lat= pos.coords.latitude;
     let long=pos.coords.longitude;
-    getForecast(lat,long);
+    getForecast(lat,long)
 }
 
 let getForecast= function(lat,long){
@@ -18,7 +21,7 @@ async function getWeatherText(url,url2){
     let weatherPlace= await fetch(url2);
     const name = await weatherPlace.json();
     parseWeather(weatherText,name);
-    displayForecast(name[0].name)
+    cityName=name[0].name
 }
 
 let parseWeather = function (weatherText,name){
@@ -67,23 +70,22 @@ let displayWeatherDay=function(cityName,dayOfWeek,icon,description,highTemp,lowT
     document.getElementById("forecast").innerHTML += out;
 }
 
-navigator.geolocation.getCurrentPosition(gotPosition);
+var globalWeather=navigator.geolocation;
+globalWeather.getCurrentPosition(gotPosition);
     
-function displayForecast(name){
+function displayForecast(){
     let button=document.getElementById("forecastBtn");
     let weather1=document.querySelector("#forecast  .weatherDay:nth-child(2)");//.style.display="block";
     let weather2=document.querySelector("#forecast  .weatherDay:nth-child(3)");//.style.display="block";
-    if (weather1.style.display === "none") /*||weather1.style.display === "") */{
+    if (weather1.style.display === "none" || weather1.style.display === "") {
         weather1.style.display = "block";
         weather2.style.display = "block";
         button.innerHTML="Today's Weather"
-        //document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather Forecast in "+cityName;
+        document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather Forecast in "+cityName;
       } else {
-        button.innerText="Forecast"
+        button.innerText="Weather Forecast"
         weather1.style.display = "none";
         weather2.style.display = "none";
-        //document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather in "+cityName;
+        document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather in "+cityName;
       }
 }
-
-//document.getElementById("forecastBtn").addEventListener("click",displayForecast)

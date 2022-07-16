@@ -4,14 +4,13 @@ p,li,a{
     color:#383C42;
 }
 
-/* background-color:#ABD8B4; */
-
 h1, h2, h3, h4, h5 {
     font-family: 'Libre Baskerville', serif;
 }
 
 body{
     background-color:#FFFEF7;
+    margin: auto;
 }
 
 /* Header styles*/
@@ -22,11 +21,9 @@ header{
     background-color:#4CB9CA;
     padding: 10px;
     padding-bottom: 20px;
-    gap:2.5rem;
+    gap:1rem;
 }
 main{
-    /* background-color:#84ebc3; */
-    /* background-color: #ABD8B4; */
     margin:1rem;
 }
 
@@ -37,7 +34,7 @@ main{
     gap:10px;
 }
 
-.hLogo img{width:100px;}
+.hLogo img{width:90px;}
 
 .hLogo p{
     font-weight:600;
@@ -54,6 +51,15 @@ main{
 
 .secondH button{
     height: 2em;
+    color:#FFFEF7;
+    background-color: #383C42;
+    cursor: pointer;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+}
+
+.secondH button:hover{
+    background-color: #636972;
 }
 
 .facebook, .instagram{width: 30px;}
@@ -114,6 +120,8 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
 .home-main section{
     border: 1px solid #383C42;
     background-color: #f7eeba;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
 }
 
 #slideshow {
@@ -122,16 +130,98 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     justify-content:center;
     align-content: center; 
     border: 1px solid #383C42;   
+    padding:0;
 }
 
 #slideshow img{
+    min-height: 14rem;
     height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit:fill;
+    border-radius:10px 10px 10px 10px;
+}
+
+#reserve-now{
+    display:flex;
+    flex-direction: column;
+}
+
+#reserve-now h2{
+    margin-bottom: 0px;
+}
+
+#reserve-now p a {
+    display: block;
+    border: solid 1px #383C42;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
+    background-color: #383C42;
+    color:  #FFFEF7;
+    text-decoration:none;
+}
+
+#reserve-now p a:hover {
+    background-color: #636972;
+}
+
+#temple-summary{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+#temple-summary h3{
+    margin-bottom:10px;
+}
+
+#temple-summary ul{
+    display: grid;
+    gap: 10px;
+    text-align: start;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#temple-summary ul li a{
+    text-decoration: none;
+}
+
+#temple-summary ul li a:hover{
+    text-decoration:underline;
 }
 
 #temple-summary img{
+    min-width:90%;
     width:70%;
+    border-radius:10px 10px 10px 10px;
+    margin: auto;
+}
+
+
+#temple-summary p a{
+    text-decoration: none;
+    display: block;
+    border: solid 1px #383C42;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
+    background-color: #383C42;
+    color:  #FFFEF7;
+    text-decoration:none;
+    width: 50%;
+    margin: auto;
+    margin-top:-20px;
+}
+
+#temple-summary p a:hover {
+    background-color: #636972;
+}
+
+#forecast .weatherDay{
+    border: 1px solid #383C42;
+    margin: 20px;
+    border-radius:10px 10px 10px 10px;
 }
 
 #description{
@@ -139,11 +229,9 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     font-weight: 600;
 }
 
-#forecast .weatherDay{
-    border: 1px solid #383C42;
-    margin: 20px;
+#forecast .weatherDay img{
+    width: 4rem;
 }
-
 .weatherDay:nth-child(2){
     display:none;
 }
@@ -153,38 +241,21 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
 }
 
 #forecastBtn{
-    color: #383C42;
+    background-color: #383C42;
+    color:  #FFFEF7;
+    border: .5px solid #383C42 ;
     margin:20px;
+    padding:.5rem;
     margin-top: 0;
-}
-
-/* #left{
-    position: absolute;
+    border-radius:10px 10px 10px 10px;
+    font-family: 'Manrope', sans-serif;
     cursor: pointer;
-    left: 5%;
-    top: -.6em;
-    font-weight:900;
-    font-size: 7rem;
-    color: #4CB9CA;
 }
 
-#right{
-    position: absolute;
-    cursor: pointer;
-    top: -.6em;
-    right: 5%;
-    color: #4CB9CA;
-    font-weight: 900;
-    font-size: 7rem;
-} */
-
-/* #left:hover{
-    text-shadow: 0 0 20px #f7eeba;
+#forecastBtn:hover{
+    /* text-shadow:10px 10px 8px #383C42 ; */
+    background-color: #636972;
 }
-
-#right:hover{
-    text-shadow: 0 0 20px #f7eeba;
-} */
 
 /* Footer styles*/
 footer{
