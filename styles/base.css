@@ -381,3 +381,29 @@ footer .very-bottom{
     object-fit:cover;
     width: 100%;
 }
+
+#schedule-list{
+    display: grid;
+    row-gap: 10px;
+}
+
+  #schedule-list  li {
+    padding-left: 35px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 24px;
+    list-style-type: none;
+    position: relative;
+  }
+  #schedule-list  li::before {
+    display: inline-flex;
+    width: 4px;
+    height: 4px;
+    margin-right: 10px;
+    margin-left: -29px;
+    background-color:#383C42;
+    border-radius: 375px;
+    content: "";
+    position: absolute;
+    top: 9px;
+  }

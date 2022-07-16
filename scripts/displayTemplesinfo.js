@@ -19,6 +19,7 @@ function templeInfo(temple){
     let ordinanceSchedule=document.createElement("p");
     let sessionSchedule=document.createElement("p");
     let closureSchedule=document.createElement("p");
+    closureSchedule.setAttribute("id","schedule-list")
     let picture=document.createElement("img");
 
     name.innerHTML=temple.templeName;
@@ -28,11 +29,9 @@ function templeInfo(temple){
     email.innerHTML=`<b>Email:</b> ${temple.email}`;
     ordinanceSchedule.innerHTML=`<b>Ordinance schedule:</b> ${temple.ordinanceSchedule}`;
     sessionSchedule.innerHTML=`<b>Session Schedule:</b> ${temple.sessionSchedule}`;
-    closureSchedule.innerHTML=`<b>Closure Schedule: </b> <ul><li>${temple.closureSchedule}</li></ul>`;
-    console.log(temple.closureSchedule)
+    closureSchedule.innerHTML=`<b>Closure Schedule:</b> ${getLi(temple.closureSchedule)}`;
     picture.setAttribute("src",temple.image);
     picture.setAttribute("alt",`${temple.templeName} temple`);
-
     section.appendChild(name);
     section.appendChild(picture);
     section.appendChild(address);
@@ -44,4 +43,13 @@ function templeInfo(temple){
     section.appendChild(closureSchedule);
 
     document.querySelector(".temples").appendChild(section);
+};
+
+function getLi(array) {
+    test=[]
+    for (var i = 0; i < array.length; i++) {
+        var li=`<li>${array[i]}</li>`
+        test.push(li)
+    }
+    return test.join("");
 };
