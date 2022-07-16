@@ -2,7 +2,7 @@
     "temples":[
         {
         "templeName":"Boston Massachusetts Temple",
-        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/boston-temple-medium.jpg",
+        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/temples-section/boston-temple-medium.jpg",
         "address":"100 Hinckley Wy Belmont MA 02478-2135 United States",
         "addressLink":"https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=boston-massachusetts-temple",
         "telephone":"(1) 617-993-9993",
@@ -15,7 +15,7 @@
         },
         {
         "templeName":"Calgary Alberta Temple",
-        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/calgary-alberta-temple2-medium.jpg",
+        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/temples-section/calgary-alberta-temple2-medium.jpg",
         "address":"9802 Rocky Ridge Rd NW Calgary AB T3G 5J7 Canada",
         "addressLink":"https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=calgary-alberta-temple",
         "telephone":"(1) 403-241-4250",
@@ -28,7 +28,7 @@
         },
         {
         "templeName":"Philadelphia Pennsylvania Temple",
-        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/philadelphia-pennsylvania-temple-medium2.jpg",
+        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/temples-section/philadelphia-pennsylvania-temple-medium2.jpg",
         "address":"1739 Vine St Philadelphia PA 19103 United States",
         "addressLink":"",
         "telephone":"(1) 215-398-3040",
@@ -41,7 +41,7 @@
         },
         {
         "templeName":"Bountiful Utah Temple",
-        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/bountiful-temple-medium.jpg",
+        "image":"https://webdeveloperintraining.github.io/wdd230_final_project/images/temples-section/bountiful-temple-medium.jpg",
         "address":"640 S Bountiful Blvd Bountiful UT 84010-1394 United States Telephone",
         "addressLink":"https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=bountiful-utah-temple",
         "telephone":"(1) 801-296-2100",

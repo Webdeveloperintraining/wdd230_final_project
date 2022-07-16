@@ -63,10 +63,10 @@ let displayWeatherDay=function(cityName,dayOfWeek,icon,description,highTemp,lowT
     let out=`<div class='weatherDay'><h3>${dayOfWeek}</h3>`
     out += `<img src="https://openweathermap.org/img/wn/${icon}.png" alt=${description}>`;
     out +=`<p id="description">${description}</p>`;
-    out +=`<p>High Temperature: ${highTemp} &deg;F</p>`;
-    out +=`<p>Low Temperature: ${lowTemp} &deg;F</p>`;
-    out +=`<p>Humidity: ${humidity} %</p>`;
-    out +=`<p>Wind Speed: ${windSpeed} mph</p></div>`;
+    out +=`<p>High Temperature: ${highTemp.toFixed(1)}&deg;F</p>`;
+    out +=`<p>Low Temperature: ${lowTemp.toFixed(1)}&deg;F</p>`;
+    out +=`<p>Humidity: ${humidity}%</p>`;
+    out +=`<p>Wind Speed: ${windSpeed.toFixed(1)}mph</p></div>`;
     document.getElementById("forecast").innerHTML += out;
 }
 

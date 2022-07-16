@@ -1,4 +1,4 @@
-const requestURL = "https://webdeveloperintraining.github.io/wdd230_final_project/json/data.json";
+const requestURL = "https://webdeveloperintraining.github.io/wdd230_final_project/json/temples.json";
 
 fetch(requestURL)
 .then(function (response){
@@ -26,9 +26,9 @@ function templeInfo(temple){
     address.innerHTML=`<b>Address:</b> <a href="${temple.addressLink}" target="_blank">${temple.address}</a>`;
     dedicated.innerHTML=`<b>Dedicated:</b> ${temple.dedicated}`;
     email.innerHTML=`<b>Email:</b> ${temple.email}`;
-    ordinanceSchedule.innerHTML=`<b>Ordinance schedule:</b> ${temple.membershipLevel}`;
+    ordinanceSchedule.innerHTML=`<b>Ordinance schedule:</b> ${temple.ordinanceSchedule}`;
     sessionSchedule.innerHTML=`<b>Session Schedule:</b> ${temple.sessionSchedule}`;
-    closureSchedule.innerHTML=`<b>Closure Schedule</b> ${temple.closureSchedule}`;
+    closureSchedule.innerHTML=`<b>Closure Schedule</b> <ul><li>${temple.closureSchedule}</li></ul>`;
     picture.setAttribute("src",temple.image);
     picture.setAttribute("alt",`${temple.templeName} temple`);
 
