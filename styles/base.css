@@ -150,20 +150,21 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     color:#383C42;  
     /* color:#f7eeba; */
     /* text-shadow:-2px 0 #383C42, 0 2px #383C42, 2px 0 #383C42, 0 -2px #383C42; */
-    text-shadow:-2px 0 #FFFEF7, 0 2px #FFFEF7, 2px 0 #FFFEF7, 0 -2px #FFFEF7;
+    text-shadow:-1.5px 0 #FFFEF7, 0 1.5px #FFFEF7, 1.5px 0 #FFFEF7, 0 -1.5px #FFFEF7;
 }
 
 #slideshow #welcome{
     left: 1rem;
     top:-.2rem;
-    font-size:1.5rem;
+    font-size:2rem;
+    text-align: left;
 }
 
-#slideshow #message{
+/* #slideshow #message{
     right: 1rem;
     bottom:1rem;
     text-align: right;
-}
+} */
 
 #reserve-now{
     display:flex;
