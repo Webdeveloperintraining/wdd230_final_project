@@ -1,5 +1,7 @@
-@media only screen and (min-width: 70rem ){
+@media only screen and (min-width: 68rem ){
     .home-main{
+        max-width: 68rem;
+        margin: auto;
         grid-template-areas:"a a a a a"
                             "s s s s s"
                             "s s s s s"
@@ -27,5 +29,27 @@
 
     #weather{
         grid-area:w;
+    }
+    
+    #weather #forecast{
+    flex-direction: column;
+    margin: 0;
+    }
+
+    .weatherDay:nth-child(2){
+        display:block;
+    }
+    
+    .weatherDay:nth-child(3){
+        display:block;
+    }
+
+    #forecastBtn{display: none;}
+
+    #reserve-now img {
+        width: 50%;
+    }
+    #temple-summary img{
+        width: 50%;
     }
 }

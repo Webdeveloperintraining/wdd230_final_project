@@ -6,6 +6,7 @@ p,li,a{
 
 h1, h2, h3, h4, h5 {
     font-family: 'Libre Baskerville', serif;
+    color:#383C42;
 }
 
 body{
@@ -131,6 +132,7 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     align-content: center; 
     border: 1px solid #383C42;   
     padding:0;
+    position: relative;
 }
 
 #slideshow img{
@@ -139,15 +141,43 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     width: 100%;
     object-fit:fill;
     border-radius:10px 10px 10px 10px;
+    display:none;
+}
+
+#slideshow #welcome,#message{
+    position: absolute;
+    /* color:#FFFEF7; */
+    color:#383C42;  
+    /* color:#f7eeba; */
+    /* text-shadow:-2px 0 #383C42, 0 2px #383C42, 2px 0 #383C42, 0 -2px #383C42; */
+    text-shadow:-2px 0 #FFFEF7, 0 2px #FFFEF7, 2px 0 #FFFEF7, 0 -2px #FFFEF7;
+}
+
+#slideshow #welcome{
+    left: 1rem;
+    top:-.2rem;
+    font-size:1.5rem;
+}
+
+#slideshow #message{
+    right: 1rem;
+    bottom:1rem;
+    text-align: right;
 }
 
 #reserve-now{
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
-#reserve-now h2{
-    margin-bottom: 0px;
+#reserve-now img{
+    min-width:70%;
+    width:70%;
+    border-radius:10px 10px 10px 10px;
+    margin:auto;
+    margin-bottom: 0;
 }
 
 #reserve-now p a {
@@ -158,6 +188,8 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     background-color: #383C42;
     color:  #FFFEF7;
     text-decoration:none;
+    width: 50%;
+    margin: auto;
 }
 
 #reserve-now p a:hover {
@@ -193,7 +225,7 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
 }
 
 #temple-summary img{
-    min-width:90%;
+    min-width:70%;
     width:70%;
     border-radius:10px 10px 10px 10px;
     margin: auto;
@@ -222,6 +254,7 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     border: 1px solid #383C42;
     margin: 20px;
     border-radius:10px 10px 10px 10px;
+    padding: 2rem;
 }
 
 #description{
@@ -250,6 +283,7 @@ nav ul li:hover { background-color: #f7eeba; font-weight:600}
     border-radius:10px 10px 10px 10px;
     font-family: 'Manrope', sans-serif;
     cursor: pointer;
+    width: 50%;
 }
 
 #forecastBtn:hover{
@@ -271,7 +305,7 @@ footer{
 
 .footer-grid .hLogo{
     grid-column: 1/2;
-    gap:5px ;
+    gap:5px;
 }
 
 .footer-grid .social-footer{
@@ -294,6 +328,14 @@ footer{
     text-align: center;
 }
 
+.footer-grid #headquarters,.very-bottom a{
+    text-decoration: none;
+}
+
+.footer-grid #headquarters:hover{
+    text-decoration:underline;
+}
+
 .footer-grid .contact-form{
     display: none;
 }
@@ -304,4 +346,8 @@ footer .very-bottom{
     text-align: center;
     /* word-break: normal; */
     /* overflow-wrap:break-word ; */
+}
+
+.very-bottom a:hover{
+    text-decoration:underline;
 }

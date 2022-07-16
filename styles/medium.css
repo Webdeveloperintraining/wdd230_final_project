@@ -27,24 +27,21 @@
         grid-area:t;
     }
 
-    #weather{
+    #weather {
         grid-area:w;
+        margin: auto;
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    #weather #forecast{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-content: center;
+    }
 
     .footer-grid{
         grid-template-columns:50% 50%;
+        row-gap:1.5rem;
         /* grid-template-rows: 50px 50px 50px 50px; */
     }
 
@@ -69,8 +66,8 @@
         grid-row: 1/5;
         grid-column: 2/3;
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        /* flex-direction: column; */
         justify-content: center;
         align-content: center;
         margin-bottom:16px;

@@ -1,30 +1,15 @@
-/* Code made with the contribution of the following page:  */
-var i=0;
-var images=["./images/bountiful-temple-sign.jpg","./images/bapstism-related-content-large.jpg","./images/calgary-alberta-temple.jpg","./images/preparing-to-enter-the-temple-large.jpg","./images/outside-the-temple-large.jpg","./images/temple-sealing-large.jpg"];
-var time=4000;
-//test=[]
+/* Code made with the contribution of the following page: https://www.w3schools.com/w3css/w3css_slideshow.asp */
+var myIndex = 0;
+carousel();
 
-// test.push(document.querySelector("#slideshow img:nth-child(1)").src)
-// test.push(document.querySelector("#slideshow img:nth-child(2)").src)
-// test.push(document.querySelector("#slideshow img:nth-child(3)").src)
-// test.push(document.querySelector("#slideshow img:nth-child(4)").src)
-
-// console.log(test)
-
-function myFunction (){
-    test.push(document.querySelector("#slideshow img").src)
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 4 seconds
 }
-
-
-function changingImages(){
-    document.slide.src= images[i]
-    if (i < images.length - 1){
-        i++
-
-    } else {
-        i=0
-    }
-    setTimeout("changingImages()",time);
-
-    }
-    window.onload=changingImages;
