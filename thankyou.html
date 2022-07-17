@@ -7,6 +7,65 @@
     <title>Thank you for contacting us</title>
 </head>
 <body>
-    
+    <header>
+        <div class="hLogo">
+            <img src="./images/inn-logo-r2.png" alt="Temple Inn & Suites' logo">
+            <p>Temple Inn & Suites</p>
+        </div>
+        <div class="secondH">
+            <a target="_blank" href="https://www.facebook.com/"><img class="facebook" src="./images/facebook_logo.png" alt="Facebook Logo"></a>
+            <a target="_blank" href="https://instagram.com/"><img class="instagram" src="./images/instagram.png" alt="Instagram Logo"></a>
+            <button class="burguer"><span>&#9776;</span><span>X</span></button>
+        </div>
+    </header>
+    <nav>
+        <ul class="main-nav">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="./reservation.html">Reservations</a></li>
+            <li><a href="./temples.html">Temples</a></li>
+            <li class="subnav"><a id="sub" href="#">Services &#9660;</a>
+                <ul class="subnav-content">
+                <li><a href="./services.html">Services Information</a></li>
+                <li><a href="./reception.html">Reception</a></li>
+                <li><a href="./temple-missionary.html">Full-Time Temple Missionary</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main></main>
+    <footer>
+        <div class="footer-grid">
+            <div class="hLogo">
+                <img src="./images/inn-logo-r2.png" alt="Temple Inn & Suites' logo">
+                <p>Temple Inn & Suites</p>
+            </div>
+            <div class="social-footer">
+                <a target="_blank" href="https://www.facebook.com/"><img class="facebook" src="./images/facebook_logo.png" alt="Facebook Logo"></a> 
+                <a target="_blank" href="https://www.instagram.com/"><img class="instagram" src="./images/instagram.png" alt="Instagram Logo"></a>
+            </div>
+            <p>Address:<a id="headquarters" target="_blank" href="https://www.google.com/maps/place/4800+Montgomery+Ln+%23300,+Bethesda,+MD+20814,+USA/@38.9832518,-77.0955318,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c97b6b8f21f1:0x9a0b3cde14da0a60!8m2!3d38.9832518!4d-77.0955318">4800 Montgomery Ln #300, Bethesda, MD 20814</a></p>
+            <p>Phone:<br>+1 301 1234 456</p>
+            
+            
+            <div class="contact-form">
+                <h3>Contact us</h3>
+                <form action="thankyou.html" method="get">
+                    <div id="form-footer">
+                        <label id="label-text-f" class="top">Email <input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
+                        <textarea name="Message" class="footer-message" cols="30" rows="5"></textarea>
+                    </div>
+                </form>
+                <input type="submit" value="Send" class="submitBtn">
+            </div>
+            
+        </div>
+        <div class="very-bottom">
+            <p>©2022 The Temple Inn & Suites | Weather provided by: <a target="_blank" href="#">OpenWeather</a> |</p>
+            <p>Last Modification: <span class="last-date"></span></p>
+        </div>
+    </footer>
+    <script src="./scripts/button_menu.js"></script>
+    <script src="./scripts/dates.js"></script>
 </body>
+
 </html>

@@ -70,6 +70,12 @@
         row-gap: 20px;
     }
 
+
+
+    #label-text-f{
+        text-align:left 10px;
+    }
+
     .contact-form form label.top input, .contact-form form label.top select{
         -webkit-appearance:none; 
         display: block;
@@ -114,9 +120,9 @@
         border-left: red solid 6px;
     }
 
-    /*.contact-form form label.top input:required{
+    .contact-form form label.top input:required{
         border-left: green solid 6px;
-    }  */
+    } 
 
 /* Home Section Page*/
     .home-main{
