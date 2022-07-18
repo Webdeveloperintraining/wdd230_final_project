@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/large.css">
-    <script src="./scripts/temperature.js" defer></script>
     <title>Home - Temple Inn & Suites</title>
 </head>
 <body>
@@ -75,19 +74,19 @@
                     <li><b>Address:</b> <a target="_blank" href="https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=philadelphia-pennsylvania-temple">1739 Vine St
                         Philadelphia PA 19103
                         United States</a></li>
-                    <li><b>Telephone:</b> (+1) 215-398-3040</li>
-                    <!-- <li><b>Services:</b> Clothing rental available & Distribution Center nearby</li> -->
-                    <!-- <li><b>Temple Closures</b>
+                    <li><b>Telephone:</b> (1) 215-398-3040</li>
+                    <li><b>Services:</b> Clothing rental available & Distribution Center nearby</li>
+                    <li><b>Temple Closures</b>
                         <ul>
                             <li>Monday, 19 September 2022 - Monday, 10 October 2022</li>
                             <li>Wednesday, 23 November 2022 - Thursday, 24 November 2022</li>
                             <li>Saturday, 24 December 2022 - Sunday, 25 December 2022</li>
                             <li>Saturday, 31 December 2022</li>
                         </ul>
-                    </li> -->
+                    </li>
                     <li><b>Dedicated:</b> 18 September 2016</li>
                 </ul>
-                    <p><a href="https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng" target="_blank">Make a reservation Now!</a></p>
+                    <p><a href="https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng" target="_blank">Make an appointment</a></p>
             </section>
 
             <section id="weather">
@@ -100,38 +99,35 @@
     <footer>
         <div class="footer-grid">
             <div class="hLogo">
-                <img src="./images/inn-logo-r2.png" alt="Temple Inn & Suites' logo">
-                <p>Temple Inn & Suites</p>
+            <img src="./images/inn-logo-r2.png" alt="Temple Inn & Suites' logo">
+            <p>Temple Inn & Suites</p>
             </div>
             <div class="social-footer">
                 <a target="_blank" href="https://www.facebook.com/"><img class="facebook" src="./images/facebook_logo.png" alt="Facebook Logo"></a> 
                 <a target="_blank" href="https://www.instagram.com/"><img class="instagram" src="./images/instagram.png" alt="Instagram Logo"></a>
             </div>
             <p>Address:<a id="headquarters" target="_blank" href="https://www.google.com/maps/place/4800+Montgomery+Ln+%23300,+Bethesda,+MD+20814,+USA/@38.9832518,-77.0955318,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c97b6b8f21f1:0x9a0b3cde14da0a60!8m2!3d38.9832518!4d-77.0955318">4800 Montgomery Ln #300, Bethesda, MD 20814</a></p>
-            <p>Phone:<br>+1 301 1234 456</p>
-            
-            
+            <p>Phone:<br>(1) 301-1234-456</p>
             <div class="contact-form">
                 <h3>Contact us</h3>
                 <form action="thankyou.html" onsubmit="return validate()" method="get">
-                    <div id="form-footer">
-                        <label class="top"><div><p id="label-text-f">Email</p></div> <input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
+                        <label class="top">Email <input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
                         <textarea name="Message" class="footer-message" cols="30" rows="5"></textarea>
+                    <div class="centerBTN">
+                        <input type="hidden" class="full-datev" name="full-date" value=""> 
+                        <input type="submit" value="Send" class="submitBtn">
                     </div>
                 </form>
-                <div class="centerBTN">
-                    <input type="hidden" class="full-datev" name="full-date" value=""> 
-                    <input type="submit" value="Send" class="submitBtn">
-                </div>
             </div>
         </div>
-        <div class="very-bottom">
-            <p>©2022 The Temple Inn & Suites | Weather provided by: <a target="_blank" href="#">OpenWeather</a> |</p>
-            <p>Last Modification: <span class="last-date"></span></p>
-        </div>
+            <div class="very-bottom">
+                <p>©2022 The Temple Inn & Suites | Weather provided by: <strong><a target="_blank" href="https://openweathermap.org/">OpenWeather</a></strong></strong> | <a target="_blank" href="./resource.html"> Resources </a></p>
+                <p><b>Last Modification: <span class="last-date"></span></b></p>
+            </div>
     </footer>
     <script src="./scripts/button_menu.js"></script>
     <script src="./scripts/changing_images.js"></script>
+    <script src="./scripts/temperature.js"></script>
     <script src="./scripts/dates.js"></script>
 </body>
 </html>

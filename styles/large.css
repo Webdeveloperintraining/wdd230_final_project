@@ -1,4 +1,16 @@
 @media only screen and (min-width: 68rem ){
+    .footer-grid{
+        justify-content: space-evenly;
+        column-gap: 2rem;
+    }
+
+    .footer-grid form label.top input{
+        width:100%;
+    }
+   .footer-grid textarea{
+        width:100%;
+    }
+    
     .home-main{
         max-width: 68rem;
         margin: auto;
@@ -58,5 +70,8 @@
         margin: auto;
         max-width: 70rem;
     }
-    
+    /*Reservation page */
+    #reservation form{
+        width: 60rem; 
+    }
 }

@@ -19,16 +19,25 @@
     /* footer*/
 
     .footer-grid{
-        grid-template-columns:50% 50%;
+        /* grid-template-columns:50% 50%; */
         row-gap:1.8rem;
-        font-size: 1.2rem;/*
+        column-gap: 15px;
+        font-size: 1.2rem;
         /* grid-template-rows: 50px 50px 50px 50px; */
+    }
+
+    footer .hLogo img{
+        width: 8rem;
+    }
+
+    footer .very-bottom{
+        font-size: 1.1rem;
     }
 
     .footer-grid .social-footer{
         grid-row: 4/5;
         grid-column: 1/2;
-        margin-bottom:16px;
+        /* margin-bottom:16px; */
     }
     .footer-grid .social-footer img{
         width:2.5rem;
@@ -45,8 +54,66 @@
         margin-bottom: 0;
     }
 
+    .footer-grid .contact-form{
+        display: block;
+        grid-row: 1/6;
+        grid-column: 2/3;
+        max-width: 25rem;
+    }
 
-/* Home Section Page*/
+    .footer-grid form label.top, form div{
+        display: block;
+        padding: 0;
+        color:#383C42 ;
+        padding-right:10px;
+        margin-bottom:10px ;
+    }
+
+    .footer-grid .contact-form h3{
+        text-align: center;
+        margin-bottom:10px;
+    }
+
+    .footer-grid form label.top input{
+        -webkit-appearance:none; 
+        display: block;
+        /* font-size: 1rem; */
+        border:solid 1px #383C42 ;
+        border-radius:4px;
+        padding: .75rem;
+        color:#383C42 ;
+        width:90%;
+        background-color:#FFFEF7;
+    }
+
+    .footer-grid textarea{
+        background-color:#FFFEF7;
+        border-color: #383C42;
+    }
+
+    .footer-grid form input.submitBtn{
+        text-align: center;
+        padding:15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 50%;
+        border: none;
+        color:  #FFFEF7;
+        font-family: 'Manrope', sans-serif;
+        background-color:#383C42 ;
+        border-radius:10px 10px 10px 10px;
+        cursor: pointer;
+    }
+
+    form input.submitBtn:hover{
+        background-color: #636972;
+    }
+
+    .footer-grid form label.top input:invalid{
+        border-left: green solid 6px;
+    }
+
+/* Home Page*/
     .home-main{
         display: grid;
         grid-template-areas:/*"a a a a"*/
@@ -86,8 +153,28 @@
         align-content: center;
     }
 
+    /*Temple Page*/
     #temple-section .temples{
         grid-template-columns: 1fr 1fr;
+        font-size: 1.2rem;
+    }
+    
+    #temple-section .temples li{
+        font-size: 1.2rem;
+    }
+
+    /*Reservation page*/
+    #reservation{
+        font-size: 1.2rem;
+    }
+
+    .end-section{
+        margin-top:1rem;
+    }
+
+    #reservation form{
+        margin:0 auto;
+        width: 38rem; 
     }
 }
 

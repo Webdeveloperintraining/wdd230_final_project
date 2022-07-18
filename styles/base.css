@@ -118,8 +118,10 @@ footer{
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 60% 40%;
+    /* grid-template-columns: 60% 40%; */
     gap: 10px;
+    justify-content: center;
+    align-content: center;
 }
 
 .footer-grid .hLogo{
@@ -163,8 +165,8 @@ footer .very-bottom{
     border-top: 1px solid #383C42;
     margin: auto;
     text-align: center;
-    /* word-break: normal; */
-    /* overflow-wrap:break-word ; */
+    word-break: normal; 
+    overflow-wrap:break-word ;
 }
 
 .very-bottom a:hover{
@@ -367,7 +369,7 @@ footer .very-bottom{
 }
 
 #forecastBtn{
-    background-color: #383C42;
+    background-color: #383c42;
     color:  #FFFEF7;
     border: .5px solid #383C42 ;
     margin:20px;
@@ -386,6 +388,15 @@ footer .very-bottom{
 
 /* Reservation Section*/
 
+#reservation{
+    display:grid;
+    justify-content: center;
+}
+
+#reservation h1{
+    text-align: center;
+}
+
 .end-section{
     border-bottom: 1px solid #4CB9CA;
     text-align: center;
@@ -403,32 +414,26 @@ form label.top, form div{
 textarea{
     width: 90%;
     padding: .75rem;
-    background-color:#FFFEF7;
+    background-color: rgba(56, 60, 66, 0.1);
     margin: auto;
     border-radius:10px 10px 10px 10px;
 }
 
-form label.top input, form label.top select{
+form label.top input{
     -webkit-appearance:none; 
     display: block;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     border:solid 1px #383C42 ;
     border-radius:4px;
     padding: .75rem;
     color:#383C42 ;
     width:91%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(56, 60, 66, 0.1);
 }
 
 form label {
     font-family: 'Manrope', sans-serif;
     cursor: pointer;
-}
-
-form label.member{
-    display: block;
-    padding: .75rem 0;
-    color:#383C42 ;
 }
 
 .centerBTN{
@@ -438,6 +443,7 @@ form label.member{
 }
 
 form input#reservation-submit{
+    margin-top: 10px;
     text-align: center;
     padding:15px;
     width: 50%;
@@ -498,6 +504,7 @@ form label.top input:invalid{
     list-style-type: none;
     position: relative;
   }
+
   #schedule-list  li::before {
     display: inline-flex;
     width: 4px;

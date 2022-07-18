@@ -10,7 +10,7 @@ let gotPosition= function(pos){
 }
 
 let getForecast= function(lat,long){
-    let url= `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=current,minutely,hourly&units=imperial&appid=625b3e54582f7765110b7e680ff34db6`;
+    let url= `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&units=imperial&appid=625b3e54582f7765110b7e680ff34db6`;
     let url2= `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=625b3e54582f7765110b7e680ff34db6`;
     getWeatherText(url,url2);
 }
@@ -35,13 +35,14 @@ let parseWeather = function (weatherText,name){
         }
     let dayOfWeek = getDayOfWeek(today);
     let icon= day.weather[0].icon;
+    let currentWeather= weatherJSON.current.temp.toFixed(0);
     let description= day.weather[0].description;
     let highTemp=day.temp.max;
     let lowTemp=day.temp.min;
     let humidity= day.humidity;
     let windSpeed= day.wind_speed;
     let cityName=name[0].name;
-    displayWeatherDay(cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed)
+    displayWeatherDay(currentWeather,cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed)
     }
 }
 
@@ -58,13 +59,14 @@ let getDayOfWeek = function (dayNum){
     return (weekday[dayNum])
 }
 
-let displayWeatherDay=function(cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed){
+let displayWeatherDay=function(currentWeather,cityName,dayOfWeek,icon,description,highTemp,lowTemp,humidity,windSpeed){
     document.querySelector("#weather h2:nth-child(1)").innerHTML="Weather in "+cityName;
     let out=`<div class='weatherDay'><h3>${dayOfWeek}</h3>`
     out += `<img src="https://openweathermap.org/img/wn/${icon}.png" alt=${description}>`;
+    out +=`<p>${currentWeather} &deg;F</p>`
     out +=`<p id="description">${description}</p>`;
-    out +=`<p>High Temperature: ${highTemp.toFixed(1)}&deg;F</p>`;
-    out +=`<p>Low Temperature: ${lowTemp.toFixed(1)}&deg;F</p>`;
+    out +=`<p>High Temperature: ${highTemp.toFixed(1)} &deg;F</p>`;
+    out +=`<p>Low Temperature: ${lowTemp.toFixed(1)} &deg;F</p>`;
     out +=`<p>Humidity: ${humidity}%</p>`;
     out +=`<p>Wind Speed: ${windSpeed.toFixed(1)}mph</p></div>`;
     document.getElementById("forecast").innerHTML += out;
