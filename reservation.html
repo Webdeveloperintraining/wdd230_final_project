@@ -43,11 +43,28 @@
         </ul>
     </nav>
     <main>
-        <form action="">
-            <fieldset>
-                <label for=""><input type="text"></input></label>
-            </fieldset>
-        </form>
+        <section id="reservation">
+            <form action="thankyou2.html"  onsubmit="return validate()" method="get">
+                <h1>Make Reservation here</h1>
+                    <label class="top">Location*<input type="text" name="location" required></label>
+                    <label class="top">Date*<input type="date" name="date" required ></label>
+                    <label class="top">Type of Room*<input type="text" name="name" required ></label>
+                    <div class="end-section"></div>
+                    <!-- <legend>Personal Information</legend> -->
+                    <h2>Personal Information</h2>
+                    <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
+                    <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
+                    <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
+                    <label class="top">Home state/Country*<input type="text" name="name" required></label>
+                    <div class="end-section"></div>
+                    <h3>Comments</h3>
+                    <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
+                <div class="centerBTN">
+                    <input type="hidden" class="full-datev" name="full-date" value=""> 
+                    <input type="submit" value="Send Message" id="reservation-submit">
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="footer-grid">
@@ -65,7 +82,7 @@
             
             <div class="contact-form">
                 <h3>Contact us</h3>
-                <form action="thankyou.html" method="get">
+                <form action="thankyou2.html" onsubmit="return validate()" method="get">
                     <div id="form-footer">
                         <label id="label-text-f" class="top">Email <input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
                         <textarea name="Message" class="footer-message" cols="30" rows="5"></textarea>

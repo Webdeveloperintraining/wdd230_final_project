@@ -17,10 +17,11 @@
     }
 
     /* footer*/
+
     .footer-grid{
         grid-template-columns:50% 50%;
         row-gap:1.8rem;
-        font-size: 1.2rem;
+        font-size: 1.2rem;/*
         /* grid-template-rows: 50px 50px 50px 50px; */
     }
 
@@ -44,85 +45,6 @@
         margin-bottom: 0;
     }
 
-    .footer-grid .contact-form{
-        grid-row: 1/7;
-        grid-column: 2/3;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        /* font-size: .8rem; */
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        margin-bottom:16px;*/
-        /* padding-top: 1rem; */
-        
-    } 
-
-    .footer-grid .contact-form h3{
-        text-align: center;
-    }
-
-    #form-footer{
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
-    }
-
-
-
-    #label-text-f{
-        text-align:left 10px;
-    }
-
-    .contact-form form label.top input, .contact-form form label.top select{
-        -webkit-appearance:none; 
-        display: block;
-        border:solid 1px #383C42;
-        border-radius:4px;
-        padding: .75rem;
-        color: #383C42;
-        margin: auto;
-        /* max-width: 20rem; */
-        width:73%;
-        /* background-color: rgba(0, 0, 0, .1); */
-    }
-    
-    input.submitBtn{
-        grid-row: 4/5;
-        grid-column: 2/3;
-        border: none;
-        background-color: #383C42;
-        font-family: 'Manrope', sans-serif;
-        color:#FFFEF7;
-        padding: .75rem 1.5rem;
-        margin:auto;
-        width: 50%;
-        /* margin-top: -10px; */
-        max-width: 20rem;
-    }
-
-    .footer-message{
-        margin: auto;
-        /* max-width: 20rem; */
-        width:70%;
-        border:solid 1px #383C42;
-        padding: .75rem 1.5rem;
-    }
-
-    input.submitBtn:hover{
-        cursor: pointer;
-        background-color: #636972;
-    }
-   
-    .contact-form form label.top input:invalid{
-        border-left: red solid 6px;
-    }
-
-    .contact-form form label.top input:required{
-        border-left: green solid 6px;
-    } 
 
 /* Home Section Page*/
     .home-main{
@@ -142,7 +64,7 @@
 
     #slideshow{
         grid-area:s;
-    } 
+    }
 
     .home-main #reserve-now {
         grid-area:r;
@@ -163,7 +85,7 @@
         justify-content: center;
         align-content: center;
     }
-    
+
     #temple-section .temples{
         grid-template-columns: 1fr 1fr;
     }

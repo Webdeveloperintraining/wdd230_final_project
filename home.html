@@ -113,13 +113,16 @@
             
             <div class="contact-form">
                 <h3>Contact us</h3>
-                <form action="thankyou.html" method="get">
+                <form action="thankyou.html" onsubmit="return validate()" method="get">
                     <div id="form-footer">
                         <label class="top"><div><p id="label-text-f">Email</p></div> <input type="email" name="email-footer" id="email-footer" required placeholder="jacob1999@gmail.com"></label>
                         <textarea name="Message" class="footer-message" cols="30" rows="5"></textarea>
                     </div>
                 </form>
-                <input type="submit" value="Send" class="submitBtn">
+                <div class="centerBTN">
+                    <input type="hidden" class="full-datev" name="full-date" value=""> 
+                    <input type="submit" value="Send" class="submitBtn">
+                </div>
             </div>
         </div>
         <div class="very-bottom">
