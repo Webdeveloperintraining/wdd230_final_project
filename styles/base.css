@@ -210,7 +210,7 @@ footer .very-bottom{
     display:none;
 }
 
-#slideshow #welcome,#message{
+#slideshow #welcome{
     position: absolute;
     /* color:#FFFEF7; */
     color:#383C42;  
@@ -233,9 +233,6 @@ footer .very-bottom{
     bottom:1rem;
     text-align: right;
 } */
-#test{
-    text-align: justify;
-}
 
 #reserve-now{
     display:flex;
@@ -527,42 +524,8 @@ form label.top input:invalid{
     align-content: center;
  }
 
- #slideshow-services {
-    border:none;
-    display: flex;
-    justify-content:center;
-    align-content: center; 
-    border: 1px solid #383C42;   
-    padding:0;
-    position: relative;
-}
-
-#slideshow-services img{
-    min-height: 14rem;
-    height: 100%;
-    width: 100%;
-    object-fit:fill;
-    border-radius:10px 10px 10px 10px;
-    display:none;
-}
-
-#slideshow-amenities {
-    border:none;
-    display: flex;
-    justify-content:center;
-    align-content: center; 
-    border: 1px solid #383C42;   
-    padding:0;
-    position: relative;
-}
-
-#slideshow-amenities img{
-    min-height: 14rem;
-    height: 100%;
-    width: 100%;
-    object-fit:fill;
-    border-radius:10px 10px 10px 10px;
-    display:none;
+ #services-page, h1, h2, h3{
+    text-align: center;
 }
 
   #services-page section{
@@ -600,4 +563,13 @@ form label.top input:invalid{
     content: "";
     position: absolute;
     top: 9px;
+  }
+
+  #services-page img{
+    /* min-height: 14rem; */
+    /* height: 100%; */
+    width: 100%;
+    object-fit:contain;
+    border-radius:10px 10px 10px 10px;
+    /* display:none; */
   }

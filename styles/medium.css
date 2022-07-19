@@ -174,7 +174,25 @@
 
     #reservation form{
         margin:0 auto;
-        width: 38rem; 
+        width: 40rem; 
     }
+
+    /*Services Page*/
+    /* #services-page section{
+        max-width: 40rem;
+        margin: auto;
+      } */
+
+      #services-page section{
+        max-width:40rem;
+        margin:auto;
+    }
+
+    #services-page img{
+        max-width:40rem;
+        margin: auto;
+    }
+
+
 }
 
