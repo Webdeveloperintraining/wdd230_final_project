@@ -74,4 +74,21 @@
     #reservation form{
         width: 60rem; 
     }
+
+      /*Services Page*/
+      #services-page{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #slideshow-services{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    #slideshow-amenities{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
 }

@@ -43,22 +43,18 @@
         </ul>
     </nav>
     <main>
-        <section id="form2">
-            <form action="thankyou.html">
-                <h2>Ask your questions here!</h2>
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <label class="top">Name*<input type="text" name="name" required placeholder="Clark / Samuel Rogers"></label>
+        <section id="missionary-form">
+            <h3>Personal Information</h3>
+            <form action="thankyou3.html"  onsubmit="return validate()" method="get">
+                    <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
                     <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
                     <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
-                </fieldset>
-                <fieldset>
-                    <legend>Message</legend>
+                    <div class="end-section"></div>
+                    <h3>Comments</h3>
                     <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
-                </fieldset>
                 <div class="centerBTN">
                     <input type="hidden" class="full-datev" name="full-date" value=""> 
-                    <input type="submit" value="Send Message" id="submit-contact">
+                    <input type="submit" value="Send Message" id="reservation-submit">
                 </div>
             </form>
         </section>
