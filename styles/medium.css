@@ -16,6 +16,10 @@
         height:2.3rem
     }
 
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
     /* footer*/
 
     .footer-grid{
@@ -144,6 +148,7 @@
     #weather {
         grid-area:w;
         margin: auto;
+        min-width:60%;
     }
 
     #weather #forecast{

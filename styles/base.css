@@ -18,7 +18,7 @@ body{
 header{
     display: flex;
     align-content: center;
-    justify-content:center;
+    justify-content:space-evenly;
     background-color:#4CB9CA;
     padding: 10px;
     padding-bottom: 20px;
@@ -70,8 +70,10 @@ main{
 
 nav ul{display: none;}
 nav ul.open {display: block;}
+
 .burguer span:nth-child(1) {display: block;}
 .burguer span:nth-child(2) {display: none;}
+
 .burguer.open span:nth-child(1) {display: none;}
 .burguer.open span:nth-child(2) {display: block;}
 
@@ -83,29 +85,27 @@ nav ul {
 }
 
 nav ul li a {
-    text-align: center;
     display: block;
     text-decoration: none;
     padding:.8rem 2vw;
     color:#383C42;
-    border: 1px solid #383C42;
+    border-bottom: 2px solid #4CB9CA;
+    text-align: center;
 }
 
 nav ul li.active a{ background-color: #383C42; color:#FFFEF7; font-weight:bolder;}
-nav ul li.active a:hover { background-color: #f7eeba; font-weight:600; color:#383C42;}
-nav ul li:hover { background-color: #f7eeba; font-weight:600}
+nav ul li.active a:hover { background-color: #383C42; font-weight:600; color:#FFFEF7;}
+nav ul li a:hover { background-color: #383C42; font-weight:600; color:#FFFEF7;}
 
 .subnav-content {
     display: none;
+    width: 100%;
     background-color: #FFFEF7;
-    font-weight:normal;
+    /* font-weight:normal; */
+    position: absolute;
+    z-index: 1;
   } 
   
-.subnav #sub:hover{
-    background-color:#383C42;
-    color: #FFFEF7;
-}
-
  .subnav:hover .subnav-content {
     display: block;
 } 

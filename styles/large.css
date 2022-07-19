@@ -1,4 +1,33 @@
 @media only screen and (min-width: 68rem ){
+    header button{
+        display: none;
+    }
+
+    nav ul.main-nav{
+        display: flex;
+        flex-direction:row ;
+        justify-content: center;
+        margin-left: 2vw;
+    }
+    
+    nav ul li a{
+        border-left: 2px solid #4CB9CA;
+        padding-bottom: 2rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        border-bottom: none;
+    }
+    
+    .subnav{
+        min-width:10rem;
+        border-right: 2px solid #4CB9CA;
+    }
+
+    .subnav-content{
+        width: inherit;
+        max-width:16.4rem;
+    }
+
     .footer-grid{
         justify-content: space-evenly;
         column-gap: 2rem;
