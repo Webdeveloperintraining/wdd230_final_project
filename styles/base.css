@@ -433,6 +433,18 @@ form label {
     cursor: pointer;
 }
 
+form label.sbs{
+    font-size: large;
+    display: block;
+    padding: .75rem 0;
+    color:#383C42 ;
+}
+
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+    accent-color: #383C42 ;
+  }
+
 .centerBTN{
     display: flex;
     justify-content:center;

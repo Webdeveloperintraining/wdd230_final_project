@@ -9,23 +9,23 @@
         justify-content: center;
         margin-left: 2vw;
     }
-    
+
     nav ul li a{
         border-left: 2px solid #4CB9CA;
-        padding-bottom: 2rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-bottom: 1.3rem;
+        padding-left: 4.2rem;
+        padding-right: 4.2rem;
         border-bottom: none;
     }
     
     .subnav{
-        min-width:10rem;
+        min-width:8rem;
         border-right: 2px solid #4CB9CA;
     }
 
     .subnav-content{
         width: inherit;
-        max-width:16.4rem;
+        max-width:14.8rem;
     }
 
     .footer-grid{
@@ -43,7 +43,7 @@
     .home-main{
         max-width: 68rem;
         margin: auto;
-        grid-template-areas:"a a a a a"
+        grid-template-areas:/*"a a a a a"*/
                             "s s s s s"
                             "s s s s s"
                             "w w r r r"
@@ -52,9 +52,9 @@
 
     }
 
-    #alerts{
+    /* #alerts{
         grid-area:a;
-    }
+    } */
 
     #slideshow{
         grid-area:s;
@@ -101,7 +101,8 @@
     }
     /*Reservation page */
     #reservation form{
-        width: 60rem; 
+        width: 60rem;
+        margin: auto; 
     }
 
       /*Services Page*/
