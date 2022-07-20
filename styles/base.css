@@ -387,6 +387,8 @@ footer .very-bottom{
 #reservation{
     display:grid;
     justify-content: center;
+    background-color:  #FFFEF7;
+    border: none;
 }
 
 #reservation h1{
@@ -735,7 +737,7 @@ section img{
 /*Reception page*/
     #reception-control{
         display: grid;
-        gap:20px ;
+        gap:20px;
     }
 
     #reception-control img{
@@ -749,6 +751,10 @@ section img{
         background-color: #f7eeba;
         border-radius:10px 10px 10px 10px;
         padding: 10px;
+    }
+
+    #reception-control img{
+        width: 60%;
     }
 
   /*Thanks pages*/
