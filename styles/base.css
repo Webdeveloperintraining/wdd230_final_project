@@ -241,11 +241,15 @@ footer .very-bottom{
     align-content: center;
 }
 
+#reserve-now p{
+    padding: .6.2px;
+}
+
 #reserve-now img{
     /* min-width:70%; */
-    width:70%;
+    /* width:70%; */
     border-radius:10px 10px 10px 10px;
-    margin:auto;
+    /* margin:auto; */
     /* margin-bottom: 0; */
 }
 
@@ -281,8 +285,10 @@ footer .very-bottom{
     display: grid;
     gap: 10px;
     text-align: start;
-    margin: 20px;
+    /* margin: 20px; */
     margin-bottom: 20px;
+    overflow-wrap:normal;
+    word-break:normal;
 }
 
 #temple-summary li{
@@ -292,6 +298,8 @@ footer .very-bottom{
     line-height: 24px;
     list-style-type: none;
     position: relative;
+    overflow-wrap:normal;
+    word-break:normal;
 }
 
 #temple-summary li::before {
@@ -316,12 +324,11 @@ footer .very-bottom{
 }
 
 #temple-summary img{
-    min-width:70%;
-    width:70%;
+    /* min-width:70%;
+    width:70%; */
     border-radius:10px 10px 10px 10px;
     margin: auto;
 }
-
 
 #temple-summary p a{
     text-decoration: none;
