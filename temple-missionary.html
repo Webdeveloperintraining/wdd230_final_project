@@ -43,22 +43,65 @@
         </ul>
     </nav>
     <main>
-        <section id="missionary-form">
-            <h3>Personal Information</h3>
-            <form action="thankyou3.html"  onsubmit="return validate()" method="get">
-                    <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
-                    <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
-                    <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
-                    <div class="end-section"></div>
-                    <h3>Comments</h3>
-                    <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
-                <div class="centerBTN">
-                    <input type="hidden" class="full-datev" name="full-date" value=""> 
-                    <input type="submit" value="Send Message" id="reservation-submit">
-                </div>
-            </form>
-        </section>
-        
+        <h1>Suites Information</h1>
+        <div id="missionary">
+            <section>
+                <h2>Basic Suites Features</h2>
+                <img src="./images/missionary-temple/basic-suite2.jpg" alt="A small but comfortable suite to stay">
+                <ul>
+                    <li>A small and comfortable bedroom with a full bed</li>
+                    <li>Internet and smart TV access</li>
+                    <li>A small living room with a table and a couple chairs </li>
+                    <li>One bathroom</li>
+                    <li>A small kitchenette</li>
+                    <li>Suited for 2 guests</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Premium Suites Features</h2>
+                <img src="./images/missionary-temple/premium-suite.jpg" alt="A medium size suite with">
+                <ul>
+                    <li>A medium bedroom with two full beds</li>
+                    <li>Dinner room</li>
+                    <li>Internet and smart TV access</li>
+                    <li>Kitchenette</li>
+                    <li>Includes two bathrooms</li>
+                    <li>Suited for 4 guests</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Deluxe Suites Features</h2>
+                <img src="./images/missionary-temple/deluxe-suite.jpg" alt="A big suite has a large room with">
+                <ul>
+                    <li>A large bedroom with two beds king size bed and a full bed size</li>
+                    <li>Fabulous panoramic temple view</li>
+                    <li>Internet and smart TV access</li>
+                    <li>A living room with a sofa-bed</li>
+                    <li>Dinner room</li>
+                    <li>Kitchenette</li>
+                    <li>Includes two bathrooms</li>
+                    <li>Suited for 6 guests</li>
+                </ul>
+            </section>
+
+            <section id="missionary-form">
+                <h3>Personal Information</h3>
+                <form action="thankyou3.html"  onsubmit="return validate()" method="get">
+                        <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
+                        <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
+                        <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
+                        <div class="end-section"></div>
+                        <h3>Comments</h3>
+                        <label><textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
+                    <div class="centerBTN">
+                        <input type="hidden" class="full-datev" name="full-date" value=""> 
+                        <input type="submit" value="Send Message" id="missionary-submit">
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-grid">

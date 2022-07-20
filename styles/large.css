@@ -121,4 +121,11 @@
         grid-column: 1/2;
         height:58rem;
     }
+
+       /*Full-time Temple misionary Page*/
+    #missionary{
+        max-width:80%;
+        margin: auto;
+    }
+
 }
