@@ -469,7 +469,44 @@ form label.top input:invalid{
 }
 
 /* Temples Section*/
-#temple-section h1{
+#templeS{
+    display: grid;
+    gap: 20px;
+    margin: auto;
+}
+
+section {
+    border: 1px solid #383C42;
+    background-color: #f7eeba;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
+    /* padding-bottom: 40px; */
+}
+
+section img{
+    margin: auto;
+    object-fit:cover;
+    width: 100%;
+} 
+
+#templeS p a{
+    text-decoration: none;
+}
+
+#templeS p a:hover{
+    text-decoration:underline;
+}
+
+/* section #temple1,#temple2,#temple3,#temple4{
+    border: 1px solid #383C42;
+    background-color: #f7eeba;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
+    padding-bottom:0px;
+
+} */
+
+/* #temple-section h1{
     text-align: center;
 }
 
@@ -502,7 +539,7 @@ form label.top input:invalid{
     margin: auto;
     object-fit:cover;
     width: 100%;
-}
+} */
 
 #schedule-list{
     display: grid;
@@ -517,9 +554,9 @@ form label.top input:invalid{
     position: relative;
   }
 
-  #schedule-list  li:nth-last-child(1) {
+  /* #schedule-list  li:nth-last-child(1) {
     margin-bottom: 20px;
-  }
+  } */
 
   #schedule-list  li::before {
     display: inline-flex;
@@ -534,14 +571,30 @@ form label.top input:invalid{
     top: 9px;
   }
 
-  #temple-section .temples section img.like {
+    img.like {
+    /* margin-top:35px ; */
+    width:50px;
+    float: left;
+    top: -10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #likes1,#likes2,#likes3,#likes4{
+    position:relative;
+    font-size: 1.2rem;
+    font-family: 'Manrope', sans-serif;
+    top: 10px;
+  }
+
+  /* #temple-section .temples section img.like {
     margin-top:10px ;
     width:50px;
     float: left;
     top: -30px;
     position: relative;
     cursor: pointer;
-  }
+  } */
 
   /*Services Page*/
  #services-page{

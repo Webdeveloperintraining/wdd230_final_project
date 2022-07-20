@@ -160,7 +160,7 @@
     }
 
     /*Temple Page*/
-    #temple-section .temples{
+    #templeS{
         grid-template-columns: 1fr 1fr;
         font-size: 1.1rem;
     }
