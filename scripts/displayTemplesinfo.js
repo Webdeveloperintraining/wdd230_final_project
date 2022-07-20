@@ -21,7 +21,9 @@ function templeInfo(temple){
     let closureSchedule=document.createElement("p");
     closureSchedule.setAttribute("id","schedule-list")
     let picture=document.createElement("img");
-    let like=document.createElement("img")
+    //let like=document.createElement("img");
+    //let counter=document.createElement("p");
+    let likeSection=document.createElement("p");
 
     name.innerHTML=temple.templeName;
     phone.innerHTML=`<b>Telephone:</b> ${temple.telephone}`;
@@ -33,9 +35,11 @@ function templeInfo(temple){
     closureSchedule.innerHTML=`<b>Closure Schedule:</b> ${getLi(temple.closureSchedule)}`;
     picture.setAttribute("src",temple.image);
     picture.setAttribute("alt",`${temple.templeName} temple`);
-    like.setAttribute("src",temple.like);
-    like.setAttribute("class","like");
-    like.setAttribute("alt","Like button icon");
+    //like.setAttribute("src",temple.like);
+    //like.setAttribute("class","like");
+    //like.setAttribute("alt","Like button icon");
+    //counter.innerHTML='<span class="likes"> 0 </span>';
+    likeSection.innerHTML=`<img class="like" src="${temple.like}" alt="Like Icon Image"> <span class="likes"> 0 </span>`;
     section.appendChild(name);
     section.appendChild(picture);
     section.appendChild(address);
@@ -45,7 +49,9 @@ function templeInfo(temple){
     section.appendChild(ordinanceSchedule);
     section.appendChild(sessionSchedule);
     section.appendChild(closureSchedule);
-    section.appendChild(like);
+    //section.appendChild(like);
+    //section.appendChild(counter);
+    section.appendChild(likeSection);
     document.querySelector(".temples").appendChild(section);
 };
 

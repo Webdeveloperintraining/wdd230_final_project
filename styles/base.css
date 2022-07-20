@@ -514,6 +514,10 @@ form label.top input:invalid{
     position: relative;
   }
 
+  #schedule-list  li:nth-last-child(1) {
+    margin-bottom: 20px;
+  }
+
   #schedule-list  li::before {
     display: inline-flex;
     width: 4px;
@@ -525,6 +529,15 @@ form label.top input:invalid{
     content: "";
     position: absolute;
     top: 9px;
+  }
+
+  #temple-section .temples section img.like {
+    margin-top:10px ;
+    width:50px;
+    float: left;
+    top: -30px;
+    position: relative;
+    cursor: pointer;
   }
 
   /*Services Page*/
@@ -584,4 +597,17 @@ form label.top input:invalid{
     object-fit:contain;
     border-radius:10px 10px 10px 10px;
     /* display:none; */
+  }
+
+  /*Thanks pages*/
+  .thanks{
+    display: flex;
+    margin-top:9rem;
+    margin-bottom: 9rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
   }
