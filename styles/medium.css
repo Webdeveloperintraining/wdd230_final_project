@@ -1,7 +1,7 @@
 @media only screen and (min-width: 37.5em){
     /* General elements */
     header{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .hLogo img{
@@ -17,7 +17,7 @@
     }
 
     nav ul li a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     /* footer*/
@@ -26,7 +26,7 @@
         /* grid-template-columns:50% 50%; */
         row-gap:1.8rem;
         column-gap: 15px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         /* grid-template-rows: 50px 50px 50px 50px; */
     }
 
@@ -51,6 +51,7 @@
         grid-row: 2/3;
         grid-column: 1/2;
         margin: auto;
+        padding-right: 20px;
     }
     .footer-grid p:nth-child(4){
         grid-row: 3/4;
@@ -161,16 +162,16 @@
     /*Temple Page*/
     #temple-section .temples{
         grid-template-columns: 1fr 1fr;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     #temple-section .temples li{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     /*Reservation page*/
     #reservation{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .end-section{
@@ -205,6 +206,7 @@
     /*Full-time Temple misionary Page*/
     #missionary{
         grid-template-columns: 1fr 1fr;
+        font-size: 1.1rem;
     }
 
 
