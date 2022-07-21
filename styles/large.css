@@ -3,6 +3,18 @@
         display: none;
     }
 
+    .hLogo img{
+        width: 13rem;
+    }
+
+    .hLogo p{
+        font-size: 1.5rem;
+    }
+
+    .secondH img{
+        width: 3rem;
+    }
+
     nav ul.main-nav{
         display: flex;
         flex-direction:row ;
@@ -12,7 +24,7 @@
 
     nav ul li a{
         border-left: 2px solid #4CB9CA;
-        padding-bottom: 1.3rem;
+        padding-bottom: 1.5rem;
         padding-left: 4.2rem;
         padding-right: 4.2rem;
         border-bottom: none;
@@ -29,8 +41,20 @@
     }
 
     .footer-grid{
-        justify-content: space-evenly;
-        column-gap: 2rem;
+        justify-content: center;
+        column-gap: 12rem;
+    }
+
+    footer .hLogo img{
+        width: 13rem;
+    }
+
+    .footer-grid .social-footer img{
+        width:3.5rem;
+    }
+
+    footer .hLogo p{
+        font-size: 1.7rem;
     }
 
     .footer-grid form label.top input{
@@ -145,6 +169,7 @@
         display: grid;
         max-width: 80%;
         column-gap:20px ;
+        align-content: center;
         /* margin:auto;
         align-items: center; */
 
@@ -154,18 +179,21 @@
         flex-direction:column;
         grid-row: 2/3;
         grid-column:1/2;
-        margin: auto;
+        /* align-items: center; */
+        
     }
 
     #premium-package{
         flex-direction:column;
         grid-column:2/3;
         grid-row: 2/3;
+        align-items: center;
 
     }
 
     #deluxe-package{
         flex-direction:column;
+        align-items: center;
         grid-column:3/4;
         grid-row: 2/3;
     }

@@ -30,10 +30,6 @@
         /* grid-template-rows: 50px 50px 50px 50px; */
     }
 
-    footer .hLogo img{
-        width: 8rem;
-    }
-
     footer .very-bottom{
         font-size: 1.1rem;
     }
@@ -43,6 +39,7 @@
         grid-column: 1/2;
         /* margin-bottom:16px; */
     }
+
     .footer-grid .social-footer img{
         width:2.5rem;
     }

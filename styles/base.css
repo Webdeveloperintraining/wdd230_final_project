@@ -742,6 +742,11 @@ section img{
     }
     
 /*Reception page*/
+    #reception-control img{
+        display: block;
+        margin: auto;
+        /* width:100px; */
+    }
     #basic-package{
         display: flex;
         flex-direction: column;
@@ -759,29 +764,6 @@ section img{
         flex-direction: column;
         row-gap: 20px;
     }
-
-    /*#reception-control{
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        gap:20px;
-    }
-    #reception-control img{
-        display: block;
-        margin: auto;
-        width: 100%;
-    }
-
-    #reception-control section{
-        border: 1px solid #383C42;
-        background-color: #f7eeba;
-        border-radius:10px 10px 10px 10px;
-        padding: 10px;
-    }
-
-    #reception-control img{
-        /* width: 95%; */
-    /*}
 
     #reception-control ul{
         display: grid;
@@ -812,13 +794,6 @@ section img{
         position: absolute;
         top: 9px;
       }
-
-      #basic-package,#premium-package,#deluxe-package{
-        display: grid;
-        justify-content: center;
-        align-items:center;
-        gap: 20px;
-      } */
 
   /*Thanks pages*/
   .thanks{
