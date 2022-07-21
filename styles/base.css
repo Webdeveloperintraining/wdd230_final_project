@@ -679,18 +679,48 @@ section img{
         padding: 10px;
     }
 
-    #missionary   li {
+    /* #missionary  li {
         padding-left: 35px;
         line-height: 24px;
         list-style-type: none;
         position: relative;
-      }
+      } */
     
       #missionary   li:nth-last-child(1) {
         margin-bottom: 20px;
       }
     
-      #missionary li::before {
+      /* #missionary li::before {
+        display: inline-flex;
+        width: 4px;
+        height: 4px;
+        margin-right: 10px;
+        margin-left: -29px;
+        background-color:#383C42;
+        border-radius: 375px;
+        content: "";
+        position: absolute;
+        top: 9px;
+      } */
+
+      #missionary  ul{
+        display: grid;
+        gap: 10px;
+        text-align: start;
+        margin: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #missionary  li{
+        padding-left: 0px;
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 24px;
+        list-style-type: none;
+        position: relative;
+    }
+    
+    #missionary  li::before {
         display: inline-flex;
         width: 4px;
         height: 4px;

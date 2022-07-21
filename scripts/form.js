@@ -2,15 +2,24 @@
 let dv= document.lastModified;
 document.querySelector(".full-datev").value=dv;
 
-//This function validates if the Business position was submitted properly
+//This function validates if a name was submited properly was submitted properly
 function validate(){
-  const input = document.querySelector('.validator').value;
-  let validation = /^[A-Za-z'-\s]{7,}$/;
+  const input = document.querySelector('.Validator').value;
+  const phoneInput =document.querySelector('.phoneValidator').value;
+  let validation2= /^[0-9\s]*$/;
+  let validation = /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/;
   let result = validation.test(input);
+  let result2 = validation2.test(phoneInput);
   if(result == false && input!=="")
   {
-    alert('Please enter a valid Job position');
-    document.querySelector('.validator').style.border="#FFD600 solid 2px";
+    alert("Please enter letters");
+    document.querySelector('.Validator').style.border="red solid 2px";
+    return false;
+  }
+  if(result2 == false && phoneInput!=="")
+  {
+    alert('Please enter a valid phone number');
+    document.querySelector('.phoneValidator').style.border="red solid 2px";
     return false;
   }
   return true;
