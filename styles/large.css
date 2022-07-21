@@ -138,7 +138,6 @@
     #missionary{
         max-width:80%;
         margin: auto;
-        grid-template-columns: 10px;
     }
 
     /* Reception page*/
