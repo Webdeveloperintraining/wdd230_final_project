@@ -12,7 +12,7 @@ function validate(){
   let result2 = validation2.test(phoneInput);
   if(result == false && input!=="")
   {
-    alert("Please enter letters");
+    alert("Please enter a name");
     document.querySelector('.Validator').style.border="red solid 2px";
     return false;
   }

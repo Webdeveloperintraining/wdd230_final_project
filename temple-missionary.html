@@ -89,12 +89,12 @@
             <section id="missionary-form">
                 <h3>Personal Information</h3>
                 <form action="thankyou3.html"  onsubmit="return validate()" method="get">
-                        <label class="top">FullName*<input type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
+                        <label class="top">FullName*<input class="Validator" type="text" name="fullname" required placeholder="Clark / Samuel Rogers"></label>
                         <label class="top">Email*<input type="email" name="email" required placeholder="pedro123@gmail.com"></label>
-                        <label class="top">Phone<input type="tel" name="phone" placeholder="664 879 1456"></label>
+                        <label class="top">Phone<input class="phoneValidator" type="tel" name="phone" placeholder="664 879 1456"></label>
                         <div class="end-section"></div>
                         <h3>Comments</h3>
-                        <label class="top">Comments<textarea name="message" id="need-text" cols="30" rows="10" required></textarea></label>
+                        <label class="top">Comments<textarea name="message" id="need-text" cols="30" rows="10"></textarea></label>
                     <div class="centerBTN">
                         <input type="hidden" class="full-datev" name="full-date" value=""> 
                         <input type="submit" value="Send Message" id="missionary-submit">
@@ -134,5 +134,6 @@
     </footer>
     <script src="./scripts/button_menu.js"></script>
     <script src="./scripts/dates.js"></script>
+    <script src="./scripts/form.js"></script>
 </body>
 </html>
