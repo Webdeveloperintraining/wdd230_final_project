@@ -742,11 +742,30 @@ section img{
     }
     
 /*Reception page*/
-    #reception-control{
-        display: grid;
-        gap:20px;
+    #basic-package{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 
+    #premium-package{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #deluxe-package{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    /*#reception-control{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        gap:20px;
+    }
     #reception-control img{
         display: block;
         margin: auto;
@@ -761,8 +780,45 @@ section img{
     }
 
     #reception-control img{
-        width: 60%;
+        /* width: 95%; */
+    /*}
+
+    #reception-control ul{
+        display: grid;
+        gap: 12px;
+        text-align: start;
+        margin: 20px;
+        margin-bottom: 20px;
     }
+    
+    #reception-control li{
+        padding-left: 0px;
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 24px;
+        list-style-type: none;
+        position: relative;
+    }
+    
+    #reception-control li::before {
+        display: inline-flex;
+        width: 4px;
+        height: 4px;
+        margin-right: 10px;
+        margin-left: -29px;
+        background-color:#383C42;
+        border-radius: 375px;
+        content: "";
+        position: absolute;
+        top: 9px;
+      }
+
+      #basic-package,#premium-package,#deluxe-package{
+        display: grid;
+        justify-content: center;
+        align-items:center;
+        gap: 20px;
+      } */
 
   /*Thanks pages*/
   .thanks{

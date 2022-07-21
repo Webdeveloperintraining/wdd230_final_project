@@ -212,25 +212,32 @@
 
     /*Full-time Temple misionary Page*/
     #missionary{
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
         font-size: 1.1rem;
     }
 
     /* Reception page*/
-   /* #reception-control{
-        max-width: 90%;
+    #reception-control{
         margin: auto;
+        max-width: 90%;
     }
 
-    #reception-control section:nth-child(1){
-        display: grid;
-        grid-template-areas: ;
-        /* grid-template-columns: 30% 30% 30%; */
-    /*}
+    #basic-package{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 
-    /*#reception-control section:nth-child(1) img{
-        width:10%;
-        grid-column: 1/2;
-    }*/
+    #premium-package{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #deluxe-package{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }
 
