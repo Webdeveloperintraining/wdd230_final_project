@@ -236,5 +236,9 @@
         flex-direction: row;
         gap: 20px;
     }
-}
 
+    .thanks{
+        font-size: 2rem;
+    }
+
+}
